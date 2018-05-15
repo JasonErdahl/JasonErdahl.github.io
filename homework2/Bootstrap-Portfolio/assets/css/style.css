@@ -1,0 +1,116 @@
+.txtCenter { text-align:center; }
+.txtRight { text-align:right; }
+.txtLarge, h1, h2 { font-size: 40px; font-family: 'Georgia', Times, Times New Roman, serif; }
+.txtMedium { font-size:1.2em; }
+.txtSmall { font-size: 10px; }
+.txtWhite { color:#fff; }
+.txtGrey { color:#777; }
+.txtLightGrey { color:#ddd; }
+.txtGreen { color:#4aaaa5; }
+.txtBold { font-weight: bold; }
+.txtLineHeight { line-height:2.0em; } 
+
+
+html { background-color:#000; }
+body { 
+  /* width:100%; */
+  margin: 20px auto;
+  padding:0 0;
+  max-width: 1400px; 
+  border: white solid 0px;
+}
+.container {max-width: 1400px;}
+
+#header, #main, #footer { width:100%; margin: 0px auto;}
+#headerContent, #mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT { max-width:960px; margin: 0px auto; }
+
+/* #################  HEADER  ########################## */
+#header {
+  padding:0;
+  height:90px;
+  background-color: #ffffff;
+  border-bottom: #ccc solid 2px;
+}
+#headerContent {
+ height:100%;
+}
+#headerName {
+height:90px;
+line-height: 90px;
+vertical-align: middle;
+background-color:#4aaaa5;
+}
+#headerNavigation {
+height:90px;
+line-height: 90px;
+vertical-align: middle;
+}
+
+/* #################  HEADER NAVIGATION  ########################## */
+#nav-smalllinks {
+    text-transform:none;
+    font-size: 18px;
+}
+#nav-smalllinks ul,#nav-smalllinks li {
+    display: inline;
+    list-style: none;
+}
+#nav-smalllinks ul li:after {
+    padding-right: 10px;
+    padding-left: 10px;
+    content: "|";
+}
+#nav-smalllinks a {
+    color: #999;
+    text-decoration: none;
+    letter-spacing: 0.90px;
+}
+#nav-smalllinks ul li:last-child:after {
+    content: " ";
+    padding-right: 0px;
+    padding-left: 0px;
+}
+#nav-smalllinks.small_nav a:hover {
+    text-decoration: underline;
+}
+
+#nav-smalllinks .menu-item_active a, #nav-smalllinks .menu-item a:hover { font-weight: bold; letter-spacing: 0.05px; }
+#nav-smalllinks .menu-item_active a { color:#4aaaa5; }
+
+/* #################  MAIN  ########################## */
+#main {
+    background-image: url("../images/vintage-concrete.png");
+    padding: 40px 0px;
+    border-bottom: #4aaaa5 solid 10px;
+    
+}
+/* #################  ABOUT  ########################## */
+#mainContentABOUT {
+    background-color:#fff;
+    border-bottom: #ccc solid 1px;
+    padding: 30px;
+}
+
+#mainContentABOUT img{
+ border: #ddd solid 2px;
+ margin: 0 25px 25px 0;
+ float:left;
+ width:200px;
+}
+
+/* #################  FOOTER  ########################## */
+#footer {
+  height:60px;
+  padding: 0px 0px;
+  margin-bottom: 0px;
+  background-color: #666;
+  position: relative;
+}
+
+#footer p{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
