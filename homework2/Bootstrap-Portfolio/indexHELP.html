@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>BootStrap - Portfolio</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://umn.bootcampcontent.com/assets/favicon-075eba76312e8421991a0c1f89a89ee81678bcde72319dd3e8047e2a47cd3a42.ico" id="favicon" />
+  <!-- We link our html to the Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+.txtCenter { text-align:center; }
+.txtRight { text-align:right; }
+.txtLarge, h1, h2 { font-size: 40px; font-family: 'Georgia', Times, Times New Roman, serif; }
+.txtMedium { font-size:1.2em; }
+.txtSmall { font-size: 10px; }
+.txtWhite { color:#fff; }
+.txtGrey { color:#777; }
+.txtLightGrey { color:#ddd; }
+.txtGreen { color:#4aaaa5; }
+.txtBold { font-weight: bold; }
+.txtLineHeight { line-height:2.0em; } 
+
+
+html { background-color:#000; }
+body { 
+  /* width:100%; */
+  margin: 20px auto;
+  padding:0 0;
+  max-width: 1400px; 
+  border: white solid 0px;
+}
+.container {max-width: 1400px;}
+
+#header, #main, #footer { width:100%; margin: 0px auto;}
+#headerContent, #mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT { max-width:960px; margin: 0px auto; }
+
+/* #################  HEADER  ########################## */
+#header {
+  padding:0;
+  height:90px;
+  background-color: #ffffff;
+  border-bottom: #ccc solid 2px;
+}
+#headerContent {
+ height:100%;
+}
+#headerName {
+height:90px;
+line-height: 90px;
+vertical-align: middle;
+background-color:#4aaaa5;
+}
+#headerName h1 { line-height:80px; }
+#headerNavigation {
+/* height:90px;
+line-height: 90px;
+vertical-align: middle; */
+}
+
+/* #################  HEADER NAVIGATION  ########################## */
+#nav-smalllinks {
+    text-transform:none;
+    font-size: 18px;
+}
+#nav-smalllinks ul,#nav-smalllinks li {
+    display: inline;
+    list-style: none;
+}
+#nav-smalllinks ul li:after {
+    padding-right: 10px;
+    padding-left: 10px;
+    content: "|";
+}
+#nav-smalllinks a {
+    color: #999;
+    text-decoration: none;
+    letter-spacing: 0.90px;
+}
+#nav-smalllinks ul li:last-child:after {
+    content: " ";
+    padding-right: 0px;
+    padding-left: 0px;
+}
+#nav-smalllinks.small_nav a:hover {
+    text-decoration: underline;
+}
+
+#nav-smalllinks .menu-item_active a, #nav-smalllinks .menu-item a:hover { font-weight: bold; letter-spacing: 0.05px; }
+#nav-smalllinks .menu-item_active a { color:#4aaaa5; }
+
+#headerNavigation .navbar { height:80px; float:right}
+.navbar .collapse.show {  z-index: 1; }
+.navbar .nav-item { background-color: #ffffff!important; text-align: center; }
+
+.navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+}
+.nav-link {
+    display: block;
+    padding: .5rem 1rem;
+}
+
+/* #################  MAIN  ########################## */
+#main {
+    background-image: url("../images/vintage-concrete.png");
+    padding: 40px 0px;
+    border-bottom: #4aaaa5 solid 10px;
+    
+}
+/* #################  ABOUT  ########################## */
+#mainContentABOUT {
+    background-color:#fff;
+    border-bottom: #ccc solid 1px;
+    padding: 30px;
+}
+
+#mainContentABOUT img{
+ border: #ddd solid 2px;
+ margin: 0 25px 25px 0;
+ float:left;
+ width:200px;
+}
+
+/* #################  FOOTER  ########################## */
+#footer {
+  height:60px;
+  padding: 0px 0px;
+  margin-bottom: 0px;
+  background-color: #666;
+  position: relative;
+}
+
+#footer p{
+    /* position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0); */
+    line-height: 55px;
+}
+
+
+</style>
+</head>
+
+<body>
+
+    <!-- Container Div -->
+    <header class="container" id="header">
+        <div class="row" id="headerContent">
+            <div class="col-md-5 col-sm-6" id="headerName">
+                <h1 class="txtCenter txtLarge txtWhite"> Jason Erdahl </h1>   
+            </div>
+            <div class="col-md-7 col-sm-6 txtRight" id="headerNavigation">
+                <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link txtMedium" href="index.html">About <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link txtMedium" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link txtMedium" href="contact.html">Contact</a>
+                        </li>
+                        </ul>
+                    </div>
+                    </nav>
+            </div>
+        </div>
+    </header>
+
+  <!-- Container Div -->
+    <div class="container" id="main">
+        <div class="row" id="mainContentABOUT">
+            <div class="col-md-12">
+                <h2 class="txtLarge txtGreen">About Me</h2>
+                <hr />
+                <img src="assets/images/JasonErdahl_Profile2.jpg" alt="Jason Erdahl Portfolio Image"  />
+                <p class="txtLineHeight txtGrey txtMedium">test </p><br />
+                <p class="txtLineHeight txtGrey txtMedium">test.</p><br />
+                <p class="txtLineHeight txtGrey txtMedium">test </p>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="container" id="footer">
+        <div class="row" >
+            <div class="col-md-12 txtCenter txtWhite txtSmall align-middle">
+                <p>Copyright &copy; 2018</p>
+            </div>
+        </div>
+    </footer>
+
+
+  <!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Bootstrap's javascript file that allows the dropdown menu to work  -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

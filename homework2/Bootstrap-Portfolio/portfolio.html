@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>BootStrap - Portfolio</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://umn.bootcampcontent.com/assets/favicon-075eba76312e8421991a0c1f89a89ee81678bcde72319dd3e8047e2a47cd3a42.ico" id="favicon" />
+  <!-- We link our html to the Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Container Div -->
+    <header class="container" id="header">
+        <div class="row" id="headerContent">
+            <div class="col-md-5 col-sm-6" id="headerName">
+                <h1 class="txtCenter txtLarge txtWhite"> Jason Erdahl </h1>   
+            </div>
+            <div class="col-md-7 col-sm-6 txtRight" id="headerNavigation">
+                <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link txtMedium" href="index.html">About <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link txtMedium" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link txtMedium" href="contact.html">Contact</a>
+                        </li>
+                        </ul>
+                    </div>
+                    </nav>
+            </div>
+        </div>
+    </header>
+
+  <!-- Container Div -->
+    <div class="container" id="main">
+        <div class="row" id="mainContentCONTACT">
+            <div class="col-md-12">
+                <h2 class="txtLarge txtGreen">Portfolio</h2>
+                <hr />
+                <div id="portfolioWrapper">
+                    <ul>
+                        <li><img src="assets/images/portfolio_01_scaled.jpg" alt="Image 1" /><div class="txtCenter"><p><a href="#" class="txtMedium txtWhite">Project #1</a></p></div></li>
+                        <li><img src="assets/images/portfolio_02_scaled.jpg" alt="Image 2"/><div class="txtCenter"><p><a href="#" class="txtMedium txtWhite">Project #2</a></p></div></li>
+                        <li><img src="assets/images/portfolio_03_scaled.jpg" alt="Image 3"/><div class="txtCenter"><p><a href="#" class="txtMedium txtWhite">Project #3</a></p></div></li>
+                        <li><img src="assets/images/portfolio_04_scaled.jpg" alt="Image 4"/><div class="txtCenter"><p><a href="#" class="txtMedium txtWhite">Project #4</a></p></div></li>
+                        <li><img src="assets/images/portfolio_05_scaled.jpg" alt="Image 5"/><div class="txtCenter"><p><a href="#" class="txtMedium txtWhite">Project #5</a></p></div></li>
+                    </ul>
+                </div>
+                <hr />
+            </div>
+        </div>
+    </div>
+
+    <footer class="container" id="footer">
+        <div class="row" >
+            <div class="col-md-12 txtCenter txtWhite txtSmall align-middle">
+                <p>Copyright &copy; 2018</p>
+            </div>
+        </div>
+    </footer>
+
+
+  <!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Bootstrap's javascript file that allows the dropdown menu to work  -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

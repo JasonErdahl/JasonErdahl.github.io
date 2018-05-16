@@ -4,8 +4,8 @@
 <head>
 
   <meta charset="UTF-8">
-  <title>Coding Bootcamp!</title>
-
+  <title>BootStrap - Portfolio</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://umn.bootcampcontent.com/assets/favicon-075eba76312e8421991a0c1f89a89ee81678bcde72319dd3e8047e2a47cd3a42.ico" id="favicon" />
   <!-- We link our html to the Bootstrap CDN -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,17 +18,28 @@
     <!-- Container Div -->
     <header class="container" id="header">
         <div class="row" id="headerContent">
-            <div class="col-md-4" id="headerName">
+            <div class="col-md-5 col-sm-6" id="headerName">
                 <h1 class="txtCenter txtLarge txtWhite"> Jason Erdahl </h1>   
             </div>
-            <div class="col-md-8 txtRight" id="headerNavigation">
-                <div id="nav-smalllinks" class="menu-small-nav-menu-container">
-                    <ul id="menu-small-nav-menu" class="menu">
-                        <li id="menu-item-11" class="menu-item_active menu-item-11"><a href="index.html">About</a></li>
-                        <li id="menu-item-12" class="menu-item menu-item-12"><a href="portfolio.html">Portfolio</a></li>
-                        <li id="menu-item-13" class="menu-item menu-item-13"><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
+            <div class="col-md-7 col-sm-6 txtRight" id="headerNavigation">
+                <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link txtMedium" href="index.html">About <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link txtMedium" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link txtMedium" href="contact.html">Contact</a>
+                        </li>
+                        </ul>
+                    </div>
+                    </nav>
             </div>
         </div>
     </header>
@@ -42,14 +53,14 @@
                 <img src="assets/images/JasonErdahl_Profile2.jpg" alt="Jason Erdahl Portfolio Image"  />
                 <p class="txtLineHeight txtGrey txtMedium">My name is Jason Erdahl. I am 44 years old. My wife Kristy and I have 3 children. Elliot (16) is a sophmore at the Prior Lake High School. Abby (13) is in 8th grade at Hidden Oaks Middle School. Braden (11) is in 5th grade at Westwood Elementary.  We live in Prior Lake MN where we moved in 2001.</p><br />
                 <p class="txtLineHeight txtGrey txtMedium">I work at 3M under the umbrella of "Managed Services". My current job description is: IT Web Site Development &amp; Support. 3M hired me in November of 2005 on a 6 month contract. 3M is a great company. They have an awesome atmosphere and a very strong innovative culture. My managers and coworkers are what make this place special. Everyone has their eye on contributing to the group. This attitude creates a culture of respect. 3M checks a ton of my boxes on what a company is supposed to be.</p><br />
-                <p class="txtLineHeight txtGrey txtMedium">When I am not working I have a ton of interests. Spending time with my family and friends is top priority. If I have the time and money available I love going skydiving. It is an activity that forces me to live "In the Moment". It is fun, challenging, beautiful, and coming to terms with my mortality leads to a greater appreciation of life. Other interests include: running, mountain biking, golf, fishing, hiking and reading. </p>
+                <p class="txtLineHeight txtGrey txtMedium">When I am not working I have a ton of interests. Spending time with my family and friends is top priority. If I have the time and money available I love going skydiving. It is an activity that forces me to live "In the Moment". It is fun, challenging, beautiful, and includes so many cool people. Other interests include: running, mountain biking, golf, fishing, hiking and reading.</p>
             </div>
         </div>
     </div>
-    
+
     <footer class="container" id="footer">
         <div class="row" >
-            <div class="col-md-12 txtCenter txtWhite txtSmall">
+            <div class="col-md-12 txtCenter txtWhite txtSmall align-middle">
                 <p>Copyright &copy; 2018</p>
             </div>
         </div>
