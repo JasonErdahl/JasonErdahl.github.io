@@ -132,7 +132,14 @@ width:270px;
     height:45px;
     width:100%;
     background-color:#4aaaa5;
-    opacity: 0.9;
+    opacity: 1.0;
+    animation-name: mainContentPORTFOLIO;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+}
+@keyframes mainContentPORTFOLIO {
+    from {opacity: 0.0;}
+    to {opacity: 1.0;}
 }
 #portfolioWrapper li p {
     position: relative;
@@ -140,6 +147,14 @@ width:270px;
 }
 #portfolioWrapper li a {
     text-decoration: none;
+    color:#fff;
+    animation-name: mainContentPORTFOLIO_link;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+}
+@keyframes mainContentPORTFOLIO_link {
+    from { color: transparent; }
+    to {color:#fff;}
 }
 #portfolioWrapper li a:hover {
     text-decoration: underline;
@@ -209,10 +224,10 @@ width:270px;
 
 
 @media (min-width: 980px) {
-    h1{background-color:black;}
+    /* h1{background-color:black;} */
     body { max-width: 1400px; }
     #headerContent {max-width:960px;}
-    #mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT {max-width:900px; padding: 30px;}
+    #mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT {max-width:900px; padding:30px;}
 }
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 980px) {
@@ -223,6 +238,7 @@ width:270px;
     #headerContent,#mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT  { margin: 0px 40px; }
     #headerContent { width: auto; }
     #headerNavigation.txtRight { text-align:center; }
+    #portfolioWrapper { min-height: 950px; }
 }
 /* Landscape phone to portrait tablet */
 @media (min-width: 640px) and (max-width: 768px) {
@@ -235,6 +251,7 @@ width:270px;
     #headerNavigation { float: left; height: 90px; line-height: 35px; }
     #nav-smalllinks { display:inline-block; }
     #mainContentABOUT h2, #mainContentPORTFOLIO h2, #mainContentCONTACT h2 {clear:both;}
+    #portfolioWrapper { min-height: 950px; }
 }
 /* Landscape phones and down */
 @media (max-width: 640px) {
@@ -247,6 +264,7 @@ width:270px;
     #headerNavigation { float:left; height:90px; line-height:35px;  width:320px; }
     #nav-smalllinks { display:inline-block; }
     #mainContentABOUT h2, #mainContentPORTFOLIO h2, #mainContentCONTACT h2 {clear:both;}
+    #portfolioWrapper { min-height: 950px; }
 }
 
 /* 
