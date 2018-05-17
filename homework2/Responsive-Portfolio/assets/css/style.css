@@ -265,6 +265,7 @@ width:270px;
     #nav-smalllinks { display:inline-block; }
     #mainContentABOUT h2, #mainContentPORTFOLIO h2, #mainContentCONTACT h2 {clear:both;}
     #portfolioWrapper { min-height: 950px; }
+    #mainContentABOUT img { display:none; }
 }
 
 /* 
