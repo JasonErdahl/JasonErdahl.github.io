@@ -1,0 +1,258 @@
+.txtCenter { text-align:center; }
+.txtRight { text-align:right; }
+.txtLarge, h1, h2 { font-size: 40px; font-family: 'Georgia', Times, Times New Roman, serif; }
+.txtMedium { font-size:1.2em; }
+.txtSmall { font-size: 10px; }
+.txtWhite { color:#fff; }
+.txtGrey { color:#777; }
+.txtLightGrey { color:#ddd; }
+.txtGreen { color:#4aaaa5; }
+.txtBold { font-weight: bold; }
+.txtLineHeight { line-height:2.0em; } 
+
+
+html { background-color:#000; }
+body { 
+  margin: 20px auto;
+  padding:0 0;
+  border: white solid 0px;
+}
+
+div, p, ul, li, a, label, input, textarea {  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;}
+
+hr { border-color: #ddd; border-width: 1px; margin-bottom:30px;}
+
+#header, #main, #footer { width:100%; margin: 0px auto;}
+#headerContent, #mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT {margin: 0px auto;}
+
+/* #################  HEADER  ########################## */
+#header {
+  padding:0;
+  margin:0;
+  height:90px;
+  background-color: #ffffff;
+  border-bottom: #ccc solid 2px;
+}
+#headerContent {
+ height:100%;
+}
+#headerName {
+float:left;
+height:90px;
+line-height: 90px;
+vertical-align: middle;
+width:300px;
+background-color:#4aaaa5;
+}
+#headerNavigation {
+float:right;
+height:90px;
+line-height: 90px;
+vertical-align: middle;
+width:270px;
+}
+
+/* #################  HEADER NAVIGATION  ########################## */
+#nav-smalllinks {
+    text-transform:none;
+    font-size: 18px;
+}
+#nav-smalllinks ul,#nav-smalllinks li {
+    display: inline;
+    list-style: none;
+}
+#nav-smalllinks ul li:after {
+    padding-right: 10px;
+    padding-left: 10px;
+    content: "|";
+}
+#nav-smalllinks a {
+    color: #999;
+    text-decoration: none;
+    letter-spacing: 0.90px;
+}
+#nav-smalllinks ul li:last-child:after {
+    content: " ";
+    padding-right: 0px;
+    padding-left: 0px;
+}
+#nav-smalllinks.small_nav a:hover {
+    text-decoration: underline;
+}
+
+#nav-smalllinks .menu-item_active a, #nav-smalllinks .menu-item a:hover { font-weight: bold; letter-spacing: 0.05px; }
+#nav-smalllinks .menu-item_active a { color:#4aaaa5; }
+
+/* #################  MAIN  ########################## */
+#main {
+    background-image: url("../images/vintage-concrete.png");
+    padding: 40px 0px;
+    border-bottom: #4aaaa5 solid 10px;
+    
+}
+/* #################  ABOUT  ########################## */
+#mainContentABOUT {
+    background-color:#fff;
+    border-bottom: #ccc solid 1px;
+}
+
+#mainContentABOUT img{
+    border: #ddd solid 2px;
+    margin: 0 25px 25px 0;
+    float:left;
+    width:200px;
+}
+
+/* #################  PORTFOLIO  ########################## */
+#mainContentPORTFOLIO {
+    background-color:#fff;
+    border-bottom: #ccc solid 1px;
+}
+
+#portfolioWrapper  {
+    max-width: 550px;
+    min-height: 550px;
+}
+
+#portfolioWrapper ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+#portfolioWrapper ul li {
+    width: 215px;
+    height: 160px;
+    float: left;
+    margin: 0 35px 35px 0;
+    position: relative;
+}
+#portfolioWrapper li div {
+    position: absolute;
+    bottom:15px;
+    height:45px;
+    width:100%;
+    background-color:#4aaaa5;
+    opacity: 0.9;
+}
+#portfolioWrapper li p {
+    position: relative;
+    top:30%;
+}
+#portfolioWrapper li a {
+    text-decoration: none;
+}
+#portfolioWrapper li a:hover {
+    text-decoration: underline;
+}
+
+/* #################  CONTACT  ########################## */
+#mainContentCONTACT {
+    background-color:#fff;
+    border-bottom: #ccc solid 1px;
+}
+
+#mainContentCONTACT fieldset {
+    width: 100%;
+}
+
+#mainContentCONTACT label.field {
+    text-align:left;
+    width:100px;
+}
+#mainContentCONTACT input{
+    width:100%;
+    height:25px;
+    margin-bottom:15px;
+    margin-top: 10px;
+}
+#mainContentCONTACT textarea{
+    width:100%;
+    height:150px;
+    margin-top: 10px;
+}
+#mainContentCONTACT fieldset p {
+    clear:both;
+    padding:5px;
+}
+#mainContentCONTACT #submit {
+    width:90px;
+    height:30px;
+    background-color: #4aaaa5;
+    color:#FFF;
+}
+#mainContentCONTACT #submit:hover {
+    background-color: #FFF;
+    color:#4aaaa5;
+}
+
+
+/* #################  FOOTER  ########################## */
+#footer {
+  height:60px;
+  padding: 0px 0px;
+  margin-bottom: 0px;
+  background-color: #666;
+  position: relative;
+}
+
+#footer p{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.clearfix { content:""; display:block; clear: both;}
+
+
+
+
+
+@media (min-width: 980px) {
+    h1{background-color:black;}
+    body { max-width: 1400px; }
+    #headerContent {max-width:960px;}
+    #mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT {max-width:900px; padding: 30px;}
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 980px) {
+    /* h1{background-color:green;} */
+    body { max-width: 777px; }
+    #headerContent {width:100%;}
+    #mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT {max-width:422px; padding: 25px;}
+    #headerContent,#mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT  { margin: 0px 40px; }
+    #headerContent { width: auto; }
+    #headerNavigation.txtRight { text-align:center; }
+}
+/* Landscape phone to portrait tablet */
+@media (min-width: 640px) and (max-width: 768px) {
+    /* h1{background-color:yellow;} */
+    body { max-width: 546px; }
+    #header { height:130px; }
+    #headerContent {max-width:515px;}
+    #mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT {max-width:471px; padding: 22px;}
+    #headerContent,#mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT  { margin: 0px 15px; }
+    #headerNavigation { float: left; height: 90px; line-height: 35px; }
+    #nav-smalllinks { display:inline-block; }
+    #mainContentABOUT h2, #mainContentPORTFOLIO h2, #mainContentCONTACT h2 {clear:both;}
+}
+/* Landscape phones and down */
+@media (max-width: 640px) {
+    /* h1{background-color:orange;} */
+    body { max-width: 376px; }
+    #header { height:130px; }
+    #headerContent { margin: 0px 0px; }
+    #headerName { width: 100%; }
+    #mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT {max-width:308px; padding: 21px;}
+    #headerNavigation { float:left; height:90px; line-height:35px;  width:320px; }
+    #nav-smalllinks { display:inline-block; }
+    #mainContentABOUT h2, #mainContentPORTFOLIO h2, #mainContentCONTACT h2 {clear:both;}
+}
+
+/* 
+Screen  Body    Content
+DEF>    1400    960
+980>    777     472         green
+768>    546     515         yellow
+640>    376     350         orange
+*/
