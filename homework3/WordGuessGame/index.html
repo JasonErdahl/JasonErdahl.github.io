@@ -4,8 +4,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Responsive - Portfolio - About Me</title>
+  <title>Word Guess Game 1.0</title>
     <link rel="shortcut icon" type="image/x-icon" href="https://umn.bootcampcontent.com/assets/favicon-075eba76312e8421991a0c1f89a89ee81678bcde72319dd3e8047e2a47cd3a42.ico" id="favicon" />
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
@@ -18,13 +20,29 @@
             <section id="headerName">
                <h1 class="txtCenter txtLarge txtWhite"> Word Guess Game </h1>
             </section>
+            <section id="headerNavigation" class="txtRight">
+                <div>
+                    <img src="assets/images/1benson0807a.JPG" height="90px" alt="Image 2"/>
+                </div>
+            </section>
         </div>
     </header>
 
     <section id="main">
-        <div id="mainGameOutput" class="txtWhite"></div>
-        <div id="mainLivesOutput" class="txtWhite"></div>
-        <div id="mainLetterOutput" class="txtWhite"></div>
+        <div id="mainContentHangMan">
+            <div id="HangManWrapper">
+                <ul>
+                    <li id="HangManLeft">
+                        <div id="mainTotalWins" class="txtGrey txtMedium">Total Wins: <span id="totalWinsValue">0</span></div>
+                        <div id="mainGameOutput" class="txtGrey txtMedium12 txtBold">Theme: Movie Adjectives</div>
+                        <div id="mainLivesOutput" class="txtGrey txtMedium12"></div>
+                        <div id="mainLetterOutput" class="txtGrey txtMedium"></div>
+                        <div id="mainChosenOutput" class="txtGrey txtMedium12"></div>
+                    </li>
+                    <li id="HangManRight"><img src="assets/images/execution-12.png" height="400px" alt="Image 2"/></li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <footer id="footer" class="txtCenter txtWhite txtSmall">

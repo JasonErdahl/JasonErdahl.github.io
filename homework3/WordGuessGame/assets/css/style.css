@@ -1,15 +1,15 @@
 .txtCenter { text-align:center; }
 .txtRight { text-align:right; }
-.txtLarge, h1, h2 { font-size: 40px; font-family: 'Georgia', Times, Times New Roman, serif; }
-.txtMedium { font-size:1.2em; }
+.txtLarge, h1, h2 { font-size: 40px; font-family:'Permanent Marker', cursive; }
+.txtMedium { font-size:1.8em; }
+.txtMedium12 { font-size:1.2em; }
 .txtSmall { font-size: 10px; }
-.txtWhite { color:#fff; }
-.txtGrey { color:#777; }
+.txtWhite { color:#ffffff; }
+.txtGrey { color:rgb(61, 61, 61); }
 .txtLightGrey { color:#ddd; }
 .txtGreen { color:#4aaaa5; }
 .txtBold { font-weight: bold; }
 .txtLineHeight { line-height:2.0em; } 
-
 
 html { background-color:#000; }
 body { 
@@ -18,12 +18,12 @@ body {
   border: white solid 0px;
 }
 
-div, p, ul, li, a, label, input, textarea {  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;}
+div, p, ul, li, a, label, input, textarea { font-family:'Orbitron', sans-serif; }
 
 hr { border-color: #ddd; border-width: 1px; margin-bottom:30px;}
 
 #header, #main, #footer { width:100%; margin: 0px auto;}
-#headerContent, #mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT {margin: 0px auto;}
+#headerContent, #mainContentHangMan {margin: 0px auto;}
 
 /* #################  HEADER  ########################## */
 #header {
@@ -42,7 +42,7 @@ height:90px;
 line-height: 90px;
 vertical-align: middle;
 width:400px;
-background-color:orange;
+background-color:red;
 }
 #headerNavigation {
 float:right;
@@ -53,15 +53,50 @@ width:270px;
 }
 
 /* #################  MAIN  ########################## */
-#main { min-height:400px;}
-#mainLetterOutput li { display:inline; }
-#mainLetterOutput li.letter { visibility:hidden;}
-#mainLetterOutput li:after {
-    padding-right: 10px;
-    padding-left: 10px;
-    content: "|";
+#main {     
+    background-image: url("../images/forest-BG.jpg");
+    padding: 40px 0px;
+    border-bottom: #ccc solid 10px;
+    }
+
+#mainContentHangMan {
+    background-color:#fff;
+    background-image: url("../images/IT_clownFace_V2.JPG");
+    background-repeat: no-repeat;
+    border-bottom: #ccc solid 1px;
+    opacity:1;
 }
 
+#HangManWrapper  {
+    max-width: 900px;
+    min-height: 550px;
+}
+#HangManLeft  {
+    min-width: 500px;
+}
+#HangManLeft div { padding-bottom:10px;}
+
+#HangManRight  {
+    min-width: 200px;
+    min-height: 400px;
+}
+
+#HangManRight img  {
+ border-color: #ddd;
+ border-width:2px;
+}
+
+#HangManWrapper ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+#HangManWrapper ul li {
+    float: left;
+    margin: 0 10px 10px 0;
+    position: relative;
+}
+#mainGameOutput img{ opacity:1; }
 
 /* #################  FOOTER  ########################## */
 #footer {
@@ -89,18 +124,18 @@ width:270px;
     /* h1{background-color:black;} */
     body { max-width: 1400px; }
     #headerContent {max-width:960px;}
-    #mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT {max-width:900px; padding:30px;}
+    #mainContentHangMan {max-width:900px; padding:30px;}
 }
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 980px) {
     /* h1{background-color:green;} */
     body { max-width: 777px; }
     #headerContent {width:100%;}
-    #mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT {max-width:422px; padding: 25px;}
-    #headerContent,#mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT  { margin: 0px 40px; }
+    #mainContentHangMan {max-width:422px; padding: 25px;}
+    #headerContent,#mainContentHangMan { margin: 0px 40px; }
     #headerContent { width: auto; }
     #headerNavigation.txtRight { text-align:center; }
-    #portfolioWrapper { min-height: 950px; }
+    #HangManWrapper { min-height: 950px; }
 }
 /* Landscape phone to portrait tablet */
 @media (min-width: 640px) and (max-width: 768px) {
@@ -108,12 +143,12 @@ width:270px;
     body { max-width: 546px; }
     #header { height:130px; }
     #headerContent {max-width:515px;}
-    #mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT {max-width:471px; padding: 22px;}
-    #headerContent,#mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT  { margin: 0px 15px; }
+    #mainContentHangMan {max-width:471px; padding: 22px;}
+    #headerContent, #mainContentHangMan  { margin: 0px 15px; }
     #headerNavigation { float: left; height: 90px; line-height: 35px; }
     #nav-smalllinks { display:inline-block; }
-    #mainContentABOUT h2, #mainContentPORTFOLIO h2, #mainContentCONTACT h2 {clear:both;}
-    #portfolioWrapper { min-height: 950px; }
+    #mainContentHangMan h2 {clear:both;}
+    #HangManWrapper { min-height: 950px; }
 }
 /* Landscape phones and down */
 @media (max-width: 640px) {
@@ -122,11 +157,11 @@ width:270px;
     #header { height:130px; }
     #headerContent { margin: 0px 0px; }
     #headerName { width: 100%; }
-    #mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT {max-width:308px; padding: 21px;}
+    #mainContentHangMan {max-width:308px; padding: 21px;}
     #headerNavigation { float:left; height:90px; line-height:35px;  width:320px; }
     #nav-smalllinks { display:inline-block; }
-    #mainContentABOUT h2, #mainContentPORTFOLIO h2, #mainContentCONTACT h2 {clear:both;}
-    #portfolioWrapper { min-height: 950px; }
+    #mainContentHangMan h2 {clear:both;}
+    #HangManWrapper { min-height: 950px; }
     #mainContentABOUT img { display:none; }
 }
 
