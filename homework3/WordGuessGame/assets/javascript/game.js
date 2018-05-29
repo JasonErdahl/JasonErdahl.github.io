@@ -6,6 +6,10 @@
     // Global Variables
     var wordList,totalGuesses,computerGuess,screenOutput,livesOutput,letterOutput,cannedMessages,guessesQueue,correctGuesses,userGuess,searchResult,letterInWord,lettersInWord,letterDuplicate,chosenOutput,hangmanImgOutput,totalWinsOutput,totalWins;
 
+    var winSounds = document.getElementById("winAudio");
+    var loseSounds = document.getElementById("loseAudio");
+
+
     function initalizeGame() {
         log('initalizeGame Start');
         // wordList = ["alpina","audi","bentley","bmw","citroen","dacia","ds","ferrari","fiat","ford","honda","hyundai","infiniti","jaguar","jeep","kia","lamborghini","lexus","lotus","maserati","mazda","mclaren","mercedes","mg","mini","mitsubishi","nissan","peugeot","porsche","renault","seat","skoda","smart","ssangyong","subaru","suzuki","tesla","toyota","vauxhall","volkswagen","volvo"];
@@ -102,10 +106,13 @@
             screenOutput.innerHTML = cannedMessages.win + "<br /><br /><img src='assets/images/Happy.gif' width='235px' alt='Jeremiah Johnson' /><br /><br />" + computerGuess;
             incramentWins();
             initalizeGame();
+            winSounds.play();
+    
         } else if (totalGuesses === 0) {
             log('You Lost!');
             screenOutput.innerHTML = cannedMessages.lose + "<br /><br /><img src='assets/images/OhFudge.gif' width='235px' alt='Christmas Story' /><br /><br />" + computerGuess;
             initalizeGame();
+            loseSounds.play();
         }
       
     }
@@ -113,6 +120,7 @@
     // This function runs after each keyboard event
     document.onkeyup = function(event) {
         screenOutput.innerHTML = '';
+        winSounds.pause();
 
         // Determines which key was pressed.
         userGuess = event.key.toLowerCase(); // User Guess
