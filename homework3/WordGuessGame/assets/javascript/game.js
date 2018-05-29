@@ -104,7 +104,7 @@
             initalizeGame();
         } else if (totalGuesses === 0) {
             log('You Lost!');
-            screenOutput.innerHTML = cannedMessages.lose + "<br /><br /><img src='assets/images/OhFudge.gif' width='235px' alt='Christmas Story' /><br /><br /> ";
+            screenOutput.innerHTML = cannedMessages.lose + "<br /><br /><img src='assets/images/OhFudge.gif' width='235px' alt='Christmas Story' /><br /><br />" + computerGuess;
             initalizeGame();
         }
       
@@ -122,7 +122,7 @@
         letterDuplicate = guessesQueue.indexOf(userGuess); // Is Guess a duplicate
 
         log("userGuess: " +userGuess+ " searchResult: " +searchResult+ " letterInWord: " +letterInWord+ " letterDuplicate: " +letterDuplicate+ " lettersInWord:|" +lettersInWord+"|");
-        if (searchResult === null || userGuess === 'f5'|| userGuess === 'f12') {
+        if (searchResult === null || userGuess === 'f5'|| userGuess === 'f12' || userGuess === 'backspace' || userGuess === 'enter') {
             // Invalid Keyboard Input
             log("Input:invalid");
             screenOutput.innerHTML = cannedMessages.invalid;

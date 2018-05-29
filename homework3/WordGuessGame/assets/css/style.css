@@ -60,7 +60,7 @@ width:270px;
     }
 
 #mainContentHangMan {
-    background-color:#fff;
+    background-color:#989898;
     background-image: url("../images/IT_clownFace_V2.JPG");
     background-repeat: no-repeat;
     border-bottom: #ccc solid 1px;
@@ -116,10 +116,6 @@ width:270px;
 
 .clearfix { content:""; display:block; clear: both;}
 
-
-
-
-
 @media (min-width: 980px) {
     /* h1{background-color:black;} */
     body { max-width: 1400px; }
@@ -135,34 +131,36 @@ width:270px;
     #headerContent,#mainContentHangMan { margin: 0px 40px; }
     #headerContent { width: auto; }
     #headerNavigation.txtRight { text-align:center; }
-    #HangManWrapper { min-height: 950px; }
+    #HangManWrapper { min-width: auto; }
+    #HangManRight img {display:none;}
 }
 /* Landscape phone to portrait tablet */
 @media (min-width: 640px) and (max-width: 768px) {
     /* h1{background-color:yellow;} */
     body { max-width: 546px; }
-    #header { height:130px; }
+    #header { /*height:130px;*/ }
     #headerContent {max-width:515px;}
     #mainContentHangMan {max-width:471px; padding: 22px;}
     #headerContent, #mainContentHangMan  { margin: 0px 15px; }
-    #headerNavigation { float: left; height: 90px; line-height: 35px; }
-    #nav-smalllinks { display:inline-block; }
+    #headerNavigation { float: left; height: 90px; line-height: 35px; display: none; }
     #mainContentHangMan h2 {clear:both;}
-    #HangManWrapper { min-height: 950px; }
+    #HangManLeft {  min-width: auto; }
+    #HangManRight img {display:none;}
 }
 /* Landscape phones and down */
 @media (max-width: 640px) {
     /* h1{background-color:orange;} */
     body { max-width: 376px; }
-    #header { height:130px; }
+    #header { /* height:130px; */ }
     #headerContent { margin: 0px 0px; }
     #headerName { width: 100%; }
     #mainContentHangMan {max-width:308px; padding: 21px;}
-    #headerNavigation { float:left; height:90px; line-height:35px;  width:320px; }
-    #nav-smalllinks { display:inline-block; }
+    #headerNavigation { float:left; height:90px; line-height:35px;  width:320px; display: none; }
     #mainContentHangMan h2 {clear:both;}
-    #HangManWrapper { min-height: 950px; }
-    #mainContentABOUT img { display:none; }
+    #HangManLeft {  min-width: auto; }
+    #HangManRight img {display:none;}
+    #mainContentHangMan { background-position-x:-210px; background-size:auto auto; }
+    .txtLarge, h1, h2 { font-size: 30px; }
 }
 
 /* 
