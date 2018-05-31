@@ -12,7 +12,6 @@
 
     function initalizeGame() {
         log('initalizeGame Start');
-        // wordList = ["alpina","audi","bentley","bmw","citroen","dacia","ds","ferrari","fiat","ford","honda","hyundai","infiniti","jaguar","jeep","kia","lamborghini","lexus","lotus","maserati","mazda","mclaren","mercedes","mg","mini","mitsubishi","nissan","peugeot","porsche","renault","seat","skoda","smart","ssangyong","subaru","suzuki","tesla","toyota","vauxhall","volkswagen","volvo"];
 
         wordList = ["charming","enjoyable","tender","sensitive","powerful","surprising","imaginative","insightful","comical","uproarious","hilarious","riveting","fascinating","dazzling","legendary","clever","charismatic","original","absorbing","intriguing","pleasant","unpretentious","boring","disgusting","brutal","bloody","predictable","weak","uneven","dreadful","violent","flawed","distasteful","senseless","confused","silly","stupid","bland","moronic","juvenile","ordinary","static","disappointing","tired","uninteresting","trite","outdated","suspenseful","slow","sentimental","romantic","oddball","wacky","dramatic","fantasy","satirical","budget","charged"];
 
@@ -121,12 +120,13 @@
     document.onkeyup = function(event) {
         screenOutput.innerHTML = '';
         winSounds.pause();
+        loseSounds.pause();
 
         // Determines which key was pressed.
         userGuess = event.key.toLowerCase(); // User Guess
         searchResult =  isLetter(userGuess); // Is Guess alphabetical
         letterInWord = computerGuess.indexOf(userGuess); // Is Guess a match
-        lettersInWord = getAllIndexes(computerGuess, userGuess);
+        lettersInWord = getAllIndexes(computerGuess, userGuess); // How many matches and their position.
         letterDuplicate = guessesQueue.indexOf(userGuess); // Is Guess a duplicate
 
         log("userGuess: " +userGuess+ " searchResult: " +searchResult+ " letterInWord: " +letterInWord+ " letterDuplicate: " +letterDuplicate+ " lettersInWord:|" +lettersInWord+"|");
