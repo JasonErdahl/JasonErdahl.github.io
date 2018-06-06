@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crystals Collector Game 1.0</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://umn.bootcampcontent.com/assets/favicon-075eba76312e8421991a0c1f89a89ee81678bcde72319dd3e8047e2a47cd3a42.ico" id="favicon" />
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</head>
+
+<body>
+
+<!-- Jumbotron for Title -->
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Crystals Collector!</h1>
+    <p class="lead">This is a fun and interactive game for web browsers.</p>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+
+
+            <!-- Container Div -->
+            <div class="container crystalInstructions">
+                <div class="row">
+                    <div class="col-md-12 background_Instructions txtWhite">
+                        <h2 class="textSize14">Instructions:</h2><br />
+                        <p>You will be given a random number at the start of the game.</p>
+                        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+                        <p>You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.</p>
+                        <p>The value of each crystal is hidden from you until you click on it.</p>
+                        <p>Each time when the game starts, the game will change the values of each crystal.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Container Div -->
+            <div class="container crystalGame">
+                <div class="row">
+                    <div class="col-md-3 textSize14 content txtWhite align-middle"><p>Number to Match:</p></div>
+                    <div class="col-md-3 textSize30 content txtWhite" id="displayCompNum"></div>
+                    <div class="col-md-6"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 textSize14 content txtWhite align-middle"><p>Current Value:</p></div>
+                    <div class="col-md-3 textSize30 content txtWhite" id="displayUserNum"></div>
+                    <div class="col-md-6"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12"><ul data-role="listview" id="displayTiles"></ul></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 textSize14 content txtWhite winIndicator">Wins: <span id="userWins"></span></div>
+                    <div class="col-md-2 textSize14 content txtWhite loseIndicator">Losses: <span id="userLosses"></span></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+
+<!-- Bootstrap's javascript file that allows the dropdown menu to work  -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

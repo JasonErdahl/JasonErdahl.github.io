@@ -1,0 +1,35 @@
+.txtWhite {color:#FFF;}
+.textSize14 {font-size:1.4em;}
+.textSize20 {font-size:2.0em;}
+.textSize30 {font-size:3.0em;}
+
+body { background-image: url("../images/milkyWay_1920.jpg"); padding: 40px 0px; }
+
+.jumbotron { padding: 2rem 2rem; background-color:mediumpurple; }
+
+.crystalGame .row div { padding:10px;}
+.crystalGame .content { background-image: url("../images/txtBackground_640.jpg"); margin-right: 5px; }
+
+#displayTiles li{ display:inline-block; height:100px; width:100px; margin:10px 10px 10px 0; border: 3px solid mediumpurple;}
+#displayTiles li:hover{ border: 3px solid #0F5C88; cursor:pointer;}
+#displayTiles li#crystalImage_0{ background-image: url("../images/purpleCrystal_1_1.jpg"); }
+#displayTiles li#crystalImage_1{ background-image: url("../images/purpleCrystal_2_1.jpg"); }
+#displayTiles li#crystalImage_2{ background-image: url("../images/purpleCrystal_3.jpg"); }
+#displayTiles li#crystalImage_3{ background-image: url("../images/purpleCrystal_4_1.jpg"); }
+.crystalInstructions { margin:0 0 10px 0; }
+.crystalInstructions p { margin:0 0 10px 0; }
+.background_Instructions { background-color:black; padding:10px; } 
+
+.winIndicator.active, .loseIndicator.active {
+    animation-name: flash;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+@keyframes flash {
+    from {color: red;}
+    to {color: black;}
+}
