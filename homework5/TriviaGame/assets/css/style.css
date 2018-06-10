@@ -1,4 +1,5 @@
 .txtCenter { text-align:center; }
+.txtVerticalMiddle { vertical-align: middle; }
 .txtRight { text-align:right; }
 .txtLarge, h1, h2 { font-size: 40px; font-family: 'Georgia', Times, Times New Roman, serif; }
 .txtMedium { font-size:1.2em; }
@@ -8,7 +9,13 @@
 .txtLightGrey { color:#ddd; }
 .txtGreen { color:#4aaaa5; }
 .txtBold { font-weight: bold; }
+.txtSize2_0 { font-size:2.0em }
+.txtSize1_6 { font-size:1.6em }
 .txtLineHeight { line-height:2.0em; } 
+.txtFontMonoSpace {font-family:monospace;}
+.floatLeft { float:left;}
+.hidden {display:none;}
+
 
 
 html { background-color:#000; }
@@ -23,7 +30,7 @@ div, p, ul, li, a, label, input, textarea {  font-family: 'Arial', 'Helvetica Ne
 hr { border-color: #ddd; border-width: 1px; margin-bottom:30px;}
 
 #header, #main, #footer { width:100%; margin: 0px auto;}
-#headerContent, #mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT {margin: 0px auto;}
+#headerContent, #mainContentQUIZ {margin: 0px auto;}
 
 /* #################  HEADER  ########################## */
 #header {
@@ -51,37 +58,16 @@ line-height: 90px;
 vertical-align: middle;
 width:270px;
 }
+#headerNavigation #count {
+    width: 35px;
+    text-align: center;
+}
 
 /* #################  HEADER NAVIGATION  ########################## */
 #nav-smalllinks {
     text-transform:none;
     font-size: 18px;
 }
-#nav-smalllinks ul,#nav-smalllinks li {
-    display: inline;
-    list-style: none;
-}
-#nav-smalllinks ul li:after {
-    padding-right: 10px;
-    padding-left: 10px;
-    content: "|";
-}
-#nav-smalllinks a {
-    color: #999;
-    text-decoration: none;
-    letter-spacing: 0.90px;
-}
-#nav-smalllinks ul li:last-child:after {
-    content: " ";
-    padding-right: 0px;
-    padding-left: 0px;
-}
-#nav-smalllinks.small_nav a:hover {
-    text-decoration: underline;
-}
-
-#nav-smalllinks .menu-item_active a, #nav-smalllinks .menu-item a:hover { font-weight: bold; letter-spacing: 0.05px; }
-#nav-smalllinks .menu-item_active a { color:#4aaaa5; }
 
 /* #################  MAIN  ########################## */
 #main {
@@ -102,102 +88,21 @@ width:270px;
     width:200px;
 }
 
-/* #################  PORTFOLIO  ########################## */
-#mainContentPORTFOLIO {
+/* #################  QUIZ  ########################## */
+#mainContentQUIZ {
     background-color:#fff;
     border-bottom: #ccc solid 1px;
 }
+#mainContentQUIZ .initialize { text-align:center; }
 
-#portfolioWrapper  {
-    max-width: 550px;
-    min-height: 550px;
-}
+#mainContentQUIZ .initialize #startButton {}
 
-#portfolioWrapper ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-}
-#portfolioWrapper ul li {
-    width: 215px;
-    height: 160px;
-    float: left;
-    margin: 0 35px 35px 0;
-    position: relative;
-}
-#portfolioWrapper li div {
-    position: absolute;
-    bottom:15px;
-    height:45px;
-    width:100%;
-    background-color:#4aaaa5;
-    opacity: 1.0;
-    animation-name: mainContentPORTFOLIO;
-    animation-duration: 6s;
-    animation-iteration-count: 1;
-}
-@keyframes mainContentPORTFOLIO {
-    from {opacity: 0.0;}
-    to {opacity: 1.0;}
-}
-#portfolioWrapper li p {
-    position: relative;
-    top:30%;
-}
-#portfolioWrapper li a {
-    text-decoration: none;
-    color:#fff;
-    animation-name: mainContentPORTFOLIO_link;
-    animation-duration: 6s;
-    animation-iteration-count: 1;
-}
-@keyframes mainContentPORTFOLIO_link {
-    from { color: transparent; }
-    to {color:#fff;}
-}
-#portfolioWrapper li a:hover {
-    text-decoration: underline;
-}
-
-/* #################  CONTACT  ########################## */
-#mainContentCONTACT {
-    background-color:#fff;
-    border-bottom: #ccc solid 1px;
-}
-
-#mainContentCONTACT fieldset {
-    width: 100%;
-}
-
-#mainContentCONTACT label.field {
-    text-align:left;
-    width:100px;
-}
-#mainContentCONTACT input{
-    width:100%;
-    height:25px;
-    margin-bottom:15px;
-    margin-top: 10px;
-}
-#mainContentCONTACT textarea{
-    width:100%;
-    height:150px;
-    margin-top: 10px;
-}
-#mainContentCONTACT fieldset p {
-    clear:both;
-    padding:5px;
-}
-#mainContentCONTACT #submit {
-    width:90px;
-    height:30px;
-    background-color: #4aaaa5;
-    color:#FFF;
-}
-#mainContentCONTACT #submit:hover {
-    background-color: #FFF;
-    color:#4aaaa5;
-}
+.questionButtons { display:block; height:100px; width:auto; margin:10px 10px 10px 0; border: 3px solid #0F5C88; background:url('../images/buttonBackgroundTransparent.png') repeat-x #666; position:relative; }
+.questionButtons p { top:50%; position:absolute; padding-left:20px; }
+.questionButtons:hover{ border: 3px solid #FF0000; cursor:pointer;}
+#mainContentQUIZ .initialize h1,
+#mainContentQUIZ .initialize h2,
+#mainContentQUIZ .initialize h3 { padding: 5px 0 5px 0;}
 
 
 /* #################  FOOTER  ########################## */
@@ -226,15 +131,15 @@ width:270px;
     /* h1{background-color:black;} */
     body { max-width: 1400px; }
     #headerContent {max-width:960px;}
-    #mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT {max-width:900px; padding:30px;}
+    #mainContentQUIZ {max-width:900px; padding:30px;}
 }
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 980px) {
     /* h1{background-color:green;} */
     body { max-width: 777px; }
     #headerContent {width:100%;}
-    #mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT {max-width:422px; padding: 25px;}
-    #headerContent,#mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT  { margin: 0px 40px; }
+    #mainContentQUIZ {max-width:422px; padding: 25px;}
+    #headerContent,#mainContentQUIZ { margin: 0px 40px; }
     #headerContent { width: auto; }
     #headerNavigation.txtRight { text-align:center; }
     #portfolioWrapper { min-height: 950px; }
@@ -245,11 +150,11 @@ width:270px;
     body { max-width: 546px; }
     #header { height:130px; }
     #headerContent {max-width:515px;}
-    #mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT {max-width:471px; padding: 22px;}
-    #headerContent,#mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT  { margin: 0px 15px; }
+    #mainContentQUIZ {max-width:471px; padding: 22px;}
+    #headerContent,#mainContentQUIZ  { margin: 0px 15px; }
     #headerNavigation { float: left; height: 90px; line-height: 35px; }
     #nav-smalllinks { display:inline-block; }
-    #mainContentABOUT h2, #mainContentPORTFOLIO h2, #mainContentCONTACT h2 {clear:both;}
+    #mainContentQUIZ h2 {clear:both;}
     #portfolioWrapper { min-height: 950px; }
 }
 /* Landscape phones and down */
@@ -259,12 +164,12 @@ width:270px;
     #header { height:130px; }
     #headerContent { margin: 0px 0px; }
     #headerName { width: 100%; }
-    #mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT {max-width:308px; padding: 21px;}
+    #mainContentQUIZ {max-width:308px; padding: 21px;}
     #headerNavigation { float:left; height:90px; line-height:35px;  width:320px; }
     #nav-smalllinks { display:inline-block; }
-    #mainContentABOUT h2, #mainContentPORTFOLIO h2, #mainContentCONTACT h2 {clear:both;}
+    #mainContentQUIZ h2 {clear:both;}
     #portfolioWrapper { min-height: 950px; }
-    #mainContentABOUT img { display:none; }
+    #mainContentQUIZ img { display:none; }
 }
 
 /* 
