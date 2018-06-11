@@ -98,7 +98,7 @@ width:270px;
 #mainContentQUIZ .initialize #startButton {}
 
 .questionButtons { display:block; height:100px; width:auto; margin:10px 10px 10px 0; border: 3px solid #0F5C88; background:url('../images/buttonBackgroundTransparent.png') repeat-x #666; position:relative; }
-.questionButtons p { top:50%; position:absolute; padding-left:20px; }
+.questionButtons p { top:35%; position:absolute; padding-left:20px; }
 .questionButtons:hover{ border: 3px solid #FF0000; cursor:pointer;}
 #mainContentQUIZ .initialize h1,
 #mainContentQUIZ .initialize h2,

@@ -1,4 +1,4 @@
-var quiz,totalQuestions,currentQuestionNUM,currentQuestionTxt,currentKey,currentQuestionNUMCount,buildElement,currentQuestionCount,currentCorrectAnswer,currentCorrectText,counter, winCounter, loseCounter, timeOutCounter, refreshIntervalId,type;
+var quiz,totalQuestions,currentQuestionNUM,currentQuestionTxt,currentKey,currentQuestionNUMCount,buildElement,currentQuestionCount,currentCorrectAnswer,currentCorrectText,counter, winCounter, loseCounter, timeOutCounter;
 
 $(document).ready(function () {
 
@@ -78,16 +78,14 @@ log(Object.keys(quiz)[0]);          // get first element of quiz
 
     function reset() {
         counter = 0;
-        clearInterval(refreshIntervalId);
-        $("#count").text("");
+        $("#count").text("00");
     }
     
-    function runCounter(i, type) {
-        log('runCounter type:' +type);
-        reset();
+    function runCounter(i) {
+
         counter = i;
         
-        refreshIntervalId = setInterval(function() {
+        setInterval(function() {
             counter--;
             if (counter >= 0) {
             span = document.getElementById("count");
@@ -96,15 +94,9 @@ log(Object.keys(quiz)[0]);          // get first element of quiz
             // Display 'counter' wherever you want to display it.
             if (counter === 0) {
                 log('this is where it happens');
-                if (type == 'testResponse') {
-                    log('runCounter: testResponse')
-                    var countDone ='INVALID'
-                    testResponse(countDone, currentCorrectAnswer,currentCorrectText);
-                } else if (type == 'callNewQuestion') {
-                    log('runCounter: callNewQuestion')
-                    callNewQuestion();
-                }
-                clearInterval(refreshIntervalId);
+                var countDone ='INVALID'
+                testResponse(countDone, currentCorrectAnswer,currentCorrectText);
+                clearInterval(counter);
             }
         
         }, 1000);
@@ -112,8 +104,7 @@ log(Object.keys(quiz)[0]);          // get first element of quiz
 
     function testResponse(currentId, currentCorrectAnswer,currentCorrectText) {
         log('testResponse- currentId: ' +currentId+ ' currentCorrectAnswer: ' +currentCorrectAnswer+ ' currentCorrectText: ' +currentCorrectText);
-        type = 'callNewQuestion';
-        runCounter(20, type);
+        // runCounter(20);
         htmlElements = '';
 
         if (currentId === 'INVALID') {
@@ -122,13 +113,13 @@ log(Object.keys(quiz)[0]);          // get first element of quiz
             htmlElements += "<h2>The correct Answer was: "+currentCorrectText+"</h2>";
             htmlElements += '</div>';
             timeOutCounter++;
-        } else if (currentId == currentCorrectAnswer) {
+        } else if (currentId === currentCorrectAnswer) {
             htmlElements += '<div class="responseOutput">';
             htmlElements += "<h1>Great Job</h1>";
             htmlElements += "<h2>"+currentCorrectText+" was the correct answer</h2>";
             htmlElements += '</div>';
             winCounter++;
-        } else  if (currentId !== currentCorrectAnswer){
+        } else {
             htmlElements += '<div class="responseOutput">';
             htmlElements += "<h1>Nice Try: See below! </h1>";
             htmlElements += "<h2>"+currentCorrectText+" was the correct answer</h2>";
@@ -144,19 +135,13 @@ log(Object.keys(quiz)[0]);          // get first element of quiz
 
                         
         $('#mainContentQUIZ').html(htmlElements);
-        
-        // When a Quiz Answer is clicked - identify which one and call testResponse()
-        $('#main').click(function(){
-            callNewQuestion();
-        });
     }
 
     function callNewQuestion() {
         totalQuestions = Object.keys(quiz).length;
 
         if (currentQuestionNUM < totalQuestions) {
-            type = 'testResponse';
-            runCounter(10,type);
+            runCounter(10);
             currentKey = Object.keys(quiz)[currentQuestionNUM];
             currentQuestionCount = quiz[currentKey].answers.length;
             currentQuestionTxt = quiz[currentKey].question;
