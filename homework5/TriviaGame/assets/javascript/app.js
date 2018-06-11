@@ -4,65 +4,67 @@ $(document).ready(function () {
 
  quiz = {
         question1: {
-            question:"What are you",
-            answers: ['Human', 'Coder', 'Zombie', 'Other'],
-            correctAnswer: 2,
+            question:"How many herbs and spices in KFC chicken",
+            answers: ['5', '7', '9', '11'],
+            correctAnswer: 3,
         },
         question2: {
-            question:"This is question 2",
-            answers: ['This is an answer1', 'This is an answer2', 'This is an answer3', 'This is an answer4'],
+            question:"Where was the first potatoe found?",
+            answers: ['In the ground', 'That is a trick question', 'In a fryer', 'In a potatoe cannon'],
             correctAnswer: 0,
         },
         question3: {
-            question:"This is question 3",
-            answers: ['This is an answer1', 'This is an answer2', 'This is an answer3', 'This is an answer4'],
-            correctAnswer: 1,
-        },
-        question4: {
-            question:"This is question 4",
-            answers: ['This is an answer1', 'This is an answer2', 'This is an answer3', 'This is an answer4'],
-            correctAnswer: 3,
-        },
-        question5: {
-            question:"This is question 5",
-            answers: ['This is an answer1', 'This is an answer2', 'This is an answer3', 'This is an answer4'],
+            question:"Which of the following is the lowest Prime",
+            answers: ['11', '12', '7', '13'],
             correctAnswer: 2,
         },
+        question4: {
+            question:"What does the 'A' stand for in NATO",
+            answers: ['Atlantic', 'Authority', 'American', 'Autonomous'],
+            correctAnswer: 2,
+        },
+        question5: {
+            question:"What blood type make a person a 'universal' donor",
+            answers: ['AB-', 'AB+', 'B+', 'O-'],
+            correctAnswer: 3,
+        },
         question6: {
-            question:"This is question 6",
-            answers: ['This is an answer1', 'This is an answer2', 'This is an answer3', 'This is an answer4'],
+            question:"What is halitosis",
+            answers: ['Enlarged Gums', 'Rare type of cancer', 'Skin condition', 'Bad Breath'],
             correctAnswer: 3,
         },
         question7: {
-            question:"This is question 7",
-            answers: ['This is an answer1', 'This is an answer2', 'This is an answer3', 'This is an answer4'],
-            correctAnswer: 2,
-        },
-        question8: {
-            question:"This is question 8",
-            answers: ['This is an answer1', 'This is an answer2', 'This is an answer3', 'This is an answer4'],
+            question:"How many years are in a score",
+            answers: ['20', '10', '50', '40'],
             correctAnswer: 0,
         },
+        question8: {
+            question:"What year did the Titanic sink",
+            answers: ['1908', '1912', '1916', '1918'],
+            correctAnswer: 1,
+        },
         question9: {
-            question:"This is question 9",
-            answers: ['This is an answer1', 'This is an answer2', 'This is an answer3', 'This is an answer4'],
-            correctAnswer: 2,
+            question:"How may gods are currently worshipped on earth (approx.)",
+            answers: ['1', '100', '100,000', '320,000,000'],
+            correctAnswer: 3,
         },
         question10: {
-            question:"This is question 10",
-            answers: ['This is an answer1', 'This is an answer2', 'This is an answer3', 'This is an answer4'],
-            correctAnswer: 1,
+            question:"The best Full Stack bootcamp cohort",
+            answers: ['Cohort 2', 'Cohort 3', 'Cohort 4', 'Cohort 5'],
+            correctAnswer: 3,
         },
 
     };
-/*
-log(quiz.question1.question);       // Get the question to question 1
-log(quiz.question1.answers.length); // Get number of answers to question 1
-log(quiz.question1.answers[0]);     // Get one of the possible answers
-log(quiz.question10.correctAnswer); // get correct index of question 1
-log(Object.keys(quiz).length);      // get number of questions
-log(Object.keys(quiz)[0]);          // get first element of quiz
-*/
+
+    /*
+    log(quiz.question1.question);       // Get the question to question 1
+    log(quiz.question1.answers.length); // Get number of answers to question 1
+    log(quiz.question1.answers[0]);     // Get one of the possible answers
+    log(quiz.question10.correctAnswer); // get correct index of question 1
+    log(Object.keys(quiz).length);      // get number of questions
+    log(Object.keys(quiz)[0]);          // get first element of quiz
+    */
+
     winCounter = 0;
     loseCounter = 0;
     timeOutCounter = 0;
@@ -119,19 +121,19 @@ log(Object.keys(quiz)[0]);          // get first element of quiz
         if (currentId === 'INVALID') {
             htmlElements += '<div class="responseOutput">';
             htmlElements += "<h1>Time Ran Out</h1>";
-            htmlElements += "<h2>The correct Answer was: "+currentCorrectText+"</h2>";
+            htmlElements += "<h2>The correct Answer was: '"+currentCorrectText+"'</h2>";
             htmlElements += '</div>';
             timeOutCounter++;
         } else if (currentId == currentCorrectAnswer) {
             htmlElements += '<div class="responseOutput">';
             htmlElements += "<h1>Great Job</h1>";
-            htmlElements += "<h2>"+currentCorrectText+" was the correct answer</h2>";
+            htmlElements += "<h2>'"+currentCorrectText+"' was the correct answer</h2>";
             htmlElements += '</div>';
             winCounter++;
         } else  if (currentId !== currentCorrectAnswer){
             htmlElements += '<div class="responseOutput">';
             htmlElements += "<h1>Nice Try: See below! </h1>";
-            htmlElements += "<h2>"+currentCorrectText+" was the correct answer</h2>";
+            htmlElements += "<h2>'"+currentCorrectText+"' was the correct answer</h2>";
             htmlElements += '</div>';
             loseCounter++;
         }
