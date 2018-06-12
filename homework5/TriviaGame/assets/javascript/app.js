@@ -24,7 +24,7 @@ $(document).ready(function () {
             correctAnswer: 2,
         },
         question5: {
-            question:"What blood type make a person a 'universal' donor",
+            question:"What blood type makes a person a 'universal' donor",
             answers: ['AB-', 'AB+', 'B+', 'O-'],
             correctAnswer: 3,
         },
@@ -88,67 +88,89 @@ $(document).ready(function () {
         log('runCounter type:' +type);
         reset();
         counter = i;
+
+        if (type == 'testResponse') {
+            log('runCounter: testResponse')
+
+                refreshIntervalId = setInterval(function() {
+                    counter--;
+                    if (counter >= 0) {
+                    span = document.getElementById("count");
+                    span.innerHTML = counter;
+                    }
+                    // Display 'counter' wherever you want to display it.
+                    if (counter === 0) {
+                        log('this is where it happens');
+                        log('runCounter: testResponse')
+                        var countDone ='INVALID'
+                        testResponse(countDone, currentCorrectAnswer,currentCorrectText);
+                        clearInterval(refreshIntervalId);
+                    }
+                
+                }, 1000);
+
+        } else if (type == 'callNewQuestion') {
+
+            log('runCounter: callNewQuestion')
+                refreshIntervalId = setInterval(function() {
+                    counter--;
+                    if (counter >= 0) {
+                        span = document.getElementById("count");
+                        span.innerHTML = counter;
+                    }
+                    // Display 'counter' wherever you want to display it.
+                    if (counter === 0) {
+                        log('this is where it happens');
+                        log('runCounter: callNewQuestion')
+                        callNewQuestion();
+                        clearInterval(refreshIntervalId);
+                    }
+                
+                }, 1000);
+
+        }
         
-        refreshIntervalId = setInterval(function() {
-            counter--;
-            if (counter >= 0) {
-            span = document.getElementById("count");
-            span.innerHTML = counter;
-            }
-            // Display 'counter' wherever you want to display it.
-            if (counter === 0) {
-                log('this is where it happens');
-                if (type == 'testResponse') {
-                    log('runCounter: testResponse')
-                    var countDone ='INVALID'
-                    testResponse(countDone, currentCorrectAnswer,currentCorrectText);
-                } else if (type == 'callNewQuestion') {
-                    log('runCounter: callNewQuestion')
-                    callNewQuestion();
-                }
-                clearInterval(refreshIntervalId);
-            }
         
-        }, 1000);
     }
 
     function testResponse(currentId, currentCorrectAnswer,currentCorrectText) {
         log('testResponse- currentId: ' +currentId+ ' currentCorrectAnswer: ' +currentCorrectAnswer+ ' currentCorrectText: ' +currentCorrectText);
         type = 'callNewQuestion';
-        runCounter(20, type);
+        runCounter(15, type);
         htmlElements = '';
 
         if (currentId === 'INVALID') {
-            htmlElements += '<div class="responseOutput">';
+            htmlElements += '<div class="responseOutput txtKhaki txtCenter">';
             htmlElements += "<h1>Time Ran Out</h1>";
             htmlElements += "<h2>The correct Answer was: '"+currentCorrectText+"'</h2>";
             htmlElements += '</div>';
             timeOutCounter++;
         } else if (currentId == currentCorrectAnswer) {
-            htmlElements += '<div class="responseOutput">';
+            htmlElements += '<div class="responseOutput txtKhaki txtCenter">';
             htmlElements += "<h1>Great Job</h1>";
             htmlElements += "<h2>'"+currentCorrectText+"' was the correct answer</h2>";
             htmlElements += '</div>';
             winCounter++;
         } else  if (currentId !== currentCorrectAnswer){
-            htmlElements += '<div class="responseOutput">';
+            htmlElements += '<div class="responseOutput txtKhaki txtCenter">';
             htmlElements += "<h1>Nice Try: See below! </h1>";
             htmlElements += "<h2>'"+currentCorrectText+"' was the correct answer</h2>";
             htmlElements += '</div>';
             loseCounter++;
         }
 
-        htmlElements += '<div class="scoreOutput"><ul>';
+        htmlElements += '<div class="scoreOutput txtKhaki txtCenter"><ul>';
         htmlElements += '<li>Correct: '+winCounter+'</li>';
         htmlElements += '<li>Incorrect: '+loseCounter+'</li>';
         htmlElements += '<li>Time Out: '+timeOutCounter+'</li>';
+        htmlElements += '<li><p><button type="button" id="startBTN" class="btn btn-primary btn-lg">Next Question</button></p></li>';
         htmlElements += '</ul></div>';
 
                         
         $('#mainContentQUIZ').html(htmlElements);
         
         // When a Quiz Answer is clicked - identify which one and call testResponse()
-        $('#main').click(function(){
+        $('#startBTN').click(function(){
             callNewQuestion();
         });
     }
@@ -158,7 +180,7 @@ $(document).ready(function () {
 
         if (currentQuestionNUM < totalQuestions) {
             type = 'testResponse';
-            runCounter(10,type);
+            runCounter(20,type);
             currentKey = Object.keys(quiz)[currentQuestionNUM];
             currentQuestionCount = quiz[currentKey].answers.length;
             currentQuestionTxt = quiz[currentKey].question;
@@ -169,13 +191,13 @@ $(document).ready(function () {
 
             var htmlElements = "";
             htmlElements += '<form id="quizForm">';
-            htmlElements += '<div class="quizQuestion" id='+ currentKey +'>';
-            htmlElements += '<p class="txtSize1_6">'+ (currentQuestionNUM+1) +' '+ currentQuestionTxt +'</p>';
+            htmlElements += '<div class="quizQuestion txtKhaki" id='+ currentKey +'>';
+            htmlElements += '<p class="txtSize1_6 txtKhaki">'+ (currentQuestionNUM+1) +' '+ currentQuestionTxt +'</p>';
 
             for (var i=0;i<currentQuestionCount;i++) {
                 var currentAnswerTxt = quiz[currentKey].answers[i]
                 //htmlElements += '<input type="radio" name="'+currentKey+'" value="'+ i +'"> '+currentAnswerTxt+'<br>';
-                htmlElements += '<div class="questionButtons '+currentKey+' txtCenter txtWhite txtSize2_0" value="'+ i +'"><p>'+currentAnswerTxt+'</p></div>';
+                htmlElements += '<div class="questionButtons '+currentKey+' txtCenter txtSize2_0" value="'+ i +'"><p class="txtKhaki">'+currentAnswerTxt+'</p></div>';
             }
 
             htmlElements += '</div>';
@@ -201,8 +223,8 @@ $(document).ready(function () {
         htmlElements = '';
         htmlElements += '<div class="initialize">';
         htmlElements += "<h1>It's Quiz Time</h1>";
-        htmlElements += "<h2>Quiz Theme: NO IDEA!!!!!!</h2>";
-        htmlElements += "<h3>Do your best</h3>";
+        htmlElements += "<h2>Quiz Theme: ** Random Facts **</h2>";
+        htmlElements += "<h3>Do your best: For some reason these questions just caught my attention.</h3>";
         htmlElements += '<p><button type="button" id="startBTN" class="btn btn-primary btn-lg">Start Quiz</button></p>';
         htmlElements += '<img src="assets/images/Intro'+random+'.jpg">';
         htmlElements += '</div>';
