@@ -139,6 +139,14 @@ $(document).ready(function () {
         runCounter(15, type);
         htmlElements = '';
 
+        if (currentQuestionNUM == totalQuestions) {
+            htmlElements += '<div class="responseOutput txtKhaki txtCenter">';
+            htmlElements += "<h1>The Quiz Is Complete</h1>";
+            htmlElements += "<h2>Hope you enjoyed yourself!</h2>";
+            htmlElements += '</div>';
+            $('#startBTN').addClass('hidden');
+        }
+
         if (currentId === 'INVALID') {
             htmlElements += '<div class="responseOutput txtKhaki txtCenter">';
             htmlElements += "<h1>Time Ran Out</h1>";
@@ -168,6 +176,11 @@ $(document).ready(function () {
 
                         
         $('#mainContentQUIZ').html(htmlElements);
+
+        if (currentQuestionNUM == totalQuestions) {
+            $('#startBTN').addClass('hidden');
+            reset();
+        }
         
         // When a Quiz Answer is clicked - identify which one and call testResponse()
         $('#startBTN').click(function(){
@@ -214,7 +227,7 @@ $(document).ready(function () {
             });
 
         } else {
-            log('No more questions')
+            log('No more questions');
         }
     }
 
