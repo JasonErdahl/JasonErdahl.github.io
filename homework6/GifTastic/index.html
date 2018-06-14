@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>GifTastic 1.0</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://umn.bootcampcontent.com/assets/favicon-075eba76312e8421991a0c1f89a89ee81678bcde72319dd3e8047e2a47cd3a42.ico" id="favicon" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+</head>
+
+<body>
+
+  <header class="container-fluid" id="header">
+        <div class="row" id="headerContent">
+            <div class="col-md-12">
+                <div id="buttons-view"></div>
+            </div>
+        </div>
+    </header>
+
+  <!-- Container Div -->
+    <div class="container-fluid" id="main">
+        <div class="row" id="mainContentGIFTASTIC">
+
+            <div class="col-md-9" id="displayGifs">
+              <div id="gifs-appear-here"> </div>
+            </div>
+            <div class="col-md-3" id="displaySubmit">
+                <h1 class="txtIvory">New Button</h1>
+                <!-- Rendered Buttons will get Dumped Here  -->
+                <form id="movie-form">
+                <label for="movie-input" class="txtIvory">Add to List</label>
+                <input type="text" id="movie-input"><br>
+
+                <!-- Button triggers new movie to be added -->
+                <input id="add-movie" type="submit" value="Update">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container" id="footer">
+        <div class="row" >
+            <div class="col-md-12 txtCenter txtWhite txtSmall align-middle">
+                <p>Copyright &copy; 2018</p>
+            </div>
+        </div>
+    </footer>
+
+  <!-- Bootstrap's javascript file that allows the dropdown menu to work  -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+<!-- 
+
+movie-form
+movie-input
+add-movie
+
+-->

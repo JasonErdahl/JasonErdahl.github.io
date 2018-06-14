@@ -1,0 +1,92 @@
+
+.txtCenter { text-align:center; }
+.txtRight { text-align:right; }
+.txtLarge, h1, h2 { font-size: 40px; font-family: 'Georgia', Times, Times New Roman, serif; }
+.txtMedium { font-size:1.2em; }
+.txtSmall { font-size: 10px; }
+.txtWhite { color:#fff; }
+.txtGrey { color:#777; }
+.txtLightGrey { color:#ddd; }
+.txtGreen { color:#4aaaa5; }
+.txtOrangeRed { color: orangered; }
+.txtIvory { color:ivory; }
+.txtBold { font-weight: bold; }
+.txtLineHeight { line-height:2.0em; } 
+.width320 { width:320px; }
+
+
+html { background-color:#000; }
+body { 
+  /* width:100%; */
+  margin: 20px auto;
+  padding:0 0;
+  max-width: 1400px; 
+  border: white solid 0px;
+}
+.row { margin:0px }
+.container {max-width: 1400px;}
+
+#header, #main, #footer { width:100%; margin: 0px auto;}
+#headerContent, mainContentGIFTASTIC { margin: 0px auto; }
+
+/* #################  HEADER  ########################## */
+#header {
+  padding:10px;
+  background-color: #ffffff;
+  border-bottom: orangered solid 2px;
+  background-image: url("../images/rain-Header.jpg");
+}
+#headerContent {
+ height:100%;
+}
+#headerContent button.movie {
+    margin: 0 5px 5px 0;
+}
+
+/* #################  HEADER NAVIGATION  ########################## */
+
+
+/* #################  MAIN  ########################## */
+#main {
+    background-image: url("../images/distressed-background_1920.jpg");
+    padding: 0px 0px;
+    border-bottom: orangered solid 10px;
+    
+}
+
+/* #################  GifTastic  ########################## */
+#mainContentGIFTASTIC {
+    border-bottom: #ccc solid 1px;
+    padding: 10px;
+    min-height: 450px;
+}
+
+#mainContentGIFTASTIC #displayGifs { float:left; border-right: 2px orangered solid; }
+#mainContentGIFTASTIC #displayGifs #gifs-appear-here * { float:left; }
+#mainContentGIFTASTIC #displayGifs #gifs-appear-here p { background-color: rgba(0,0,0,0.7); padding: 0 5px 5px 5px; }
+
+#mainContentGIFTASTIC #displaySubmit { float:right; min-width: 200px; background-color: rgba(0,0,0,0.7); padding-top: 10px; }
+
+#mainContentGIFTASTIC img{
+ border: #ddd solid 2px;
+ margin: 5px;
+ width:300px;
+}
+
+
+
+
+
+/* #################  FOOTER  ########################## */
+#footer {
+  height:60px;
+  padding: 0px 0px;
+  margin-bottom: 0px;
+  background-color: #666;
+  position: relative;
+}
+
+#footer p{
+    line-height: 55px;
+}
+

@@ -136,6 +136,7 @@ $(document).ready(function () {
     function testResponse(currentId, currentCorrectAnswer,currentCorrectText) {
         log('testResponse- currentId: ' +currentId+ ' currentCorrectAnswer: ' +currentCorrectAnswer+ ' currentCorrectText: ' +currentCorrectText);
         type = 'callNewQuestion';
+        reset();
         runCounter(15, type);
         htmlElements = '';
 
