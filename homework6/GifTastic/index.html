@@ -11,6 +11,7 @@
 
     <!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 
     <!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
     <script type="text/javascript" src="assets/javascript/app.js"></script>
@@ -38,11 +39,28 @@
                 <h1 class="txtIvory">New Button</h1>
                 <!-- Rendered Buttons will get Dumped Here  -->
                 <form id="movie-form">
-                <label for="movie-input" class="txtIvory">Add to List</label>
-                <input type="text" id="movie-input"><br>
+                <label for="gif-input" class="txtIvory">Add to List</label>
+                <div class="marginBottom10"><input type="text" id="gif-input"></div>
 
                 <!-- Button triggers new movie to be added -->
-                <input id="add-movie" type="submit" value="Update">
+                <div class="marginBottom10"><input id="add-gif" type="submit" value="Update"></div> 
+
+                <hr />
+                <div class="marginBottom10"><input id="clear-movie" type="submit" value="Clear Gif's"></div>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       Gif Rating
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#" value="">All Ratings</a>
+                        <a class="dropdown-item" href="#" value="y">Y</a>
+                        <a class="dropdown-item" href="#" value="g">G</a>
+                        <a class="dropdown-item" href="#" value="pg">PG</a>
+                        <a class="dropdown-item" href="#" value="pg-13">PG-13</a>
+                        <a class="dropdown-item" href="#" value="r">R</a>
+                    </div>
+                </div>
                 </form>
             </div>
         </div>
@@ -65,7 +83,7 @@
 <!-- 
 
 movie-form
-movie-input
-add-movie
+gif-input
+add-gif
 
 -->

@@ -13,6 +13,8 @@
 .txtBold { font-weight: bold; }
 .txtLineHeight { line-height:2.0em; } 
 .width320 { width:320px; }
+.marginBottom10 {margin:0 0 10px 0;}
+
 
 
 html { background-color:#000; }
@@ -23,6 +25,8 @@ body {
   max-width: 1400px; 
   border: white solid 0px;
 }
+hr { border-top: 1px solid rgba(255,69,0,1);}
+
 .row { margin:0px }
 .container {max-width: 1400px;}
 
@@ -58,14 +62,17 @@ body {
 #mainContentGIFTASTIC {
     border-bottom: #ccc solid 1px;
     padding: 10px;
-    min-height: 450px;
+    min-height: 550px;
 }
 
 #mainContentGIFTASTIC #displayGifs { float:left; border-right: 2px orangered solid; }
 #mainContentGIFTASTIC #displayGifs #gifs-appear-here * { float:left; }
-#mainContentGIFTASTIC #displayGifs #gifs-appear-here p { background-color: rgba(0,0,0,0.7); padding: 0 5px 5px 5px; }
+#mainContentGIFTASTIC #displayGifs #gifs-appear-here p { background-color: rgba(0,0,0,0.7); padding: 0 5px 5px 5px; margin:0 0 20px 0; }
 
-#mainContentGIFTASTIC #displaySubmit { float:right; min-width: 200px; background-color: rgba(0,0,0,0.7); padding-top: 10px; }
+#mainContentGIFTASTIC #displaySubmit { float:right; min-width: 200px; min-height: 350px; background-color: rgba(0,0,0,0.7); padding-top: 10px; }
+
+#displaySubmit #add-movie, #displaySubmit #clear-movie { min-width:100px; }
+
 
 #mainContentGIFTASTIC img{
  border: #ddd solid 2px;
@@ -83,10 +90,30 @@ body {
   padding: 0px 0px;
   margin-bottom: 0px;
   background-color: #666;
-  position: relative;
 }
 
 #footer p{
     line-height: 55px;
 }
 
+
+
+@media (min-width: 980px) {
+    /* h1{background-color:black;} */ 
+
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 980px) {
+    /* h1{background-color:green;} */ 
+
+}
+/* Landscape phone to portrait tablet */
+@media (min-width: 640px) and (max-width: 768px) {
+    /* h1{background-color:yellow;} */ 
+    #mainContentGIFTASTIC #displaySubmit { position:unset; }
+}
+/* Landscape phones and down */
+@media (max-width: 640px) {
+    /* h1{background-color:orange;} */ 
+
+}
