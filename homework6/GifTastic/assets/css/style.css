@@ -43,7 +43,7 @@ hr { border-top: 1px solid rgba(255,69,0,1);}
 #headerContent {
  height:100%;
 }
-#headerContent button.movie {
+#headerContent button.displayGif {
     margin: 0 5px 5px 0;
 }
 
@@ -65,13 +65,15 @@ hr { border-top: 1px solid rgba(255,69,0,1);}
     min-height: 550px;
 }
 
-#mainContentGIFTASTIC #displayGifs { float:left; border-right: 2px orangered solid; }
+#mainContentGIFTASTIC #displayGifs { float:left; }
 #mainContentGIFTASTIC #displayGifs #gifs-appear-here * { float:left; }
 #mainContentGIFTASTIC #displayGifs #gifs-appear-here p { background-color: rgba(0,0,0,0.7); padding: 0 5px 5px 5px; margin:0 0 20px 0; }
 
-#mainContentGIFTASTIC #displaySubmit { float:right; min-width: 200px; min-height: 350px; background-color: rgba(0,0,0,0.7); padding-top: 10px; }
+#mainContentGIFTASTIC #displaySubmit { float:right; min-width: 200px; min-height: 350px; background-color: rgba(0,0,0,0.7); padding-top: 10px; border: 2px orangered solid;}
 
-#displaySubmit #add-movie, #displaySubmit #clear-movie { min-width:100px; }
+#displaySubmit #add-gif, #displaySubmit #clear-gif { min-width:115px; border-radius: 5px;}
+#displaySubmit #clear-gif { color: #fff; background-color: #6c757d; border-color: #6c757d; }
+#displaySubmit #clear-gif:hover { background-color: #545b62; border-color: #545b62; }
 
 
 #mainContentGIFTASTIC img{
@@ -79,10 +81,6 @@ hr { border-top: 1px solid rgba(255,69,0,1);}
  margin: 5px;
  width:300px;
 }
-
-
-
-
 
 /* #################  FOOTER  ########################## */
 #footer {
@@ -110,7 +108,7 @@ hr { border-top: 1px solid rgba(255,69,0,1);}
 /* Landscape phone to portrait tablet */
 @media (min-width: 640px) and (max-width: 768px) {
     /* h1{background-color:yellow;} */ 
-    #mainContentGIFTASTIC #displaySubmit { position:unset; }
+
 }
 /* Landscape phones and down */
 @media (max-width: 640px) {
