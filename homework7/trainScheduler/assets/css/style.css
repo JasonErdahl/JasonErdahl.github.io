@@ -1,0 +1,109 @@
+
+.txtCenter { text-align:center; }
+.txtRight { text-align:right; }
+h1, h2 { font-family: 'Georgia', Times, Times New Roman, serif; }
+.txtLarge { font-size:5em;}
+.txtMedium { font-size:1.2em; }
+.txtSmall { font-size: 10px; }
+.txtWhite { color:#fff; }
+.txtGrey { color:#777; }
+.txtLightGrey { color:#ddd; }
+.txtGreen { color:#4aaaa5; }
+.txtOrangeRed { color: orangered; }
+.txtIvory { color:ivory; }
+.txtBold { font-weight: bold; }
+.txtLineHeight { line-height:2.0em; } 
+.width320 { width:320px; }
+.marginBottom10 {margin:0 0 10px 0;}
+
+html { background-color:#000; }
+body { 
+    margin: 20px auto;
+    padding:0 0;
+    max-width: 1400px; 
+    border: white solid 0px;
+    background-image: url(../images/gleise-BG_1920.jpg);
+    background-repeat: no-repeat;
+    background-position-x: -200px;
+    background-position-y: -110px;
+}
+hr { border-top: 1px solid rgba(255,69,0,1);}
+
+.row { margin:0px }
+.container { max-width:960px; padding-right: 0; padding-left: 0; } 
+
+#header, #main, #footer { width:100%; margin: 0px auto;}
+#headerContent { margin: 0px auto; }
+
+.jumbotron {
+    background-image: url(../images/ancient-arch-arch-bridge-507410.jpg);
+    background-position-x: 0px;
+    background-position-y:-150px;
+    background-size: 960px auto;
+    background-repeat: no-repeat;
+    background-color: transparent;      
+}
+#cogImage {
+    background-image: url(../images/gear-1127518_1920.png);
+    background-repeat:no-repeat;
+    margin: 0 15%;
+    height: 400px;
+    width: auto;
+}
+.jumbotron h1 { /*font-family:'Monoton', cursive;*/ font-family:'Luckiest Guy', cursive; color:red; }
+.card { background-color:rgba(0,0,0,.7); margin-bottom:20px;}
+.card * {color:#fff;}
+.card h3 { margin-left: 20px; margin-top: 10px; }
+.card button { margin-top: 10px; }
+.card button.btn-primary {
+    color: #fff;
+    background-color: red;
+    border-color: red;
+}
+.card input { color: #000; }
+#train-table tr:last-child td { background-color:red; font-weight:700; }
+
+
+@media (min-width: 980px) {
+    /* h1{background-color:black;} */
+    #headerContent { max-width:960px; }
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 980px) {
+    /* h1{background-color:green;} */
+    body {
+        background-position-x: -500px;
+        background-position-y: -110px;
+    }
+    .jumbotron {
+        background-position-x: -70px;
+        background-position-y: -160px;    
+    }
+    #cogImage { display:none; }
+}
+/* Landscape phone to portrait tablet */
+@media (min-width: 640px) and (max-width: 768px) {
+    /* h1{background-color:yellow;} */
+    body {
+        background-position-x: -630px;
+        background-position-y: -110px;
+    }    
+    .jumbotron {
+        background-position-x: -70px;
+        background-position-y: -160px;    
+    }
+    #cogImage { display:none; }
+}
+/* Landscape phones and down */
+@media (max-width: 640px) {
+    /* h1{background-color:orange;} */
+    body {
+        background-position-x: -750px;
+        background-position-y: -110px;
+    }
+    .jumbotron {
+        background-position-x: -170px;
+        background-position-y: -180px;  
+    }
+    #cogImage { display:none; }
+}
