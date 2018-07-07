@@ -26,6 +26,7 @@ body {
     background-repeat: no-repeat;
     background-position-x: -200px;
     background-position-y: -110px;
+    background-color:#9E9E9C;
 }
 hr { border-top: 1px solid rgba(255,69,0,1);}
 

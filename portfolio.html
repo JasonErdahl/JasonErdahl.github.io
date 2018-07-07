@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <title>Responsive - Portfolio - Portfolio</title>
     <link rel="shortcut icon" type="image/x-icon" href="https://umn.bootcampcontent.com/assets/favicon-075eba76312e8421991a0c1f89a89ee81678bcde72319dd3e8047e2a47cd3a42.ico" id="favicon" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
@@ -36,19 +37,24 @@
             <hr />
             <div id="portfolioWrapper">
                 <ul>
-                    <li><img src="assets/images/portfolio_04_scaled.jpg" alt="Image 4"/><div class="txtCenter"><p><a href="homework3/WordGuessGame/index.html" class="txtMedium txtWhite" target="_blank">Word Guess</a></p></div></li>
-                    <li><img src="assets/images/portfolio_03_scaled.jpg" alt="Image 3"/><div class="txtCenter"><p><a href="homework4/unit-4-game/index.html" class="txtMedium txtWhite" target="_blank">Crystals</a></p></div></li>
-                    <li><img src="assets/images/portfolio_01_scaled.jpg" alt="Image 1" /><div class="txtCenter"><p><a href="homework5/TriviaGame/index.html" class="txtMedium txtWhite" target="_blank">Quiz</a></p></div></li>
-                    <li><img src="assets/images/portfolio_02_scaled.jpg" alt="Image 2" /><div class="txtCenter"><p><a href="homework6/GifTastic/index.html" class="txtMedium txtWhite" target="_blank">GifTastic</a></p></div></li>
-                    <li><img src="assets/images/portfolio_05_scaled.jpg" alt="Image 5"/><div class="txtCenter"><p><a href="homework7/trainScheduler/index.html" class="txtMedium txtWhite" target="_blank">Scheduler</a></p></div></li>
-                </ul>
+                    <li id="techWordGuess"><img src="assets/images/portfolio_04_scaled.jpg" alt="Image 4"/><div class="txtCenter"><p><a href="homework3/WordGuessGame/index.html" class="txtMedium txtWhite" target="_blank">Word Guess</a></p></div></li>
+                    <li id="techCrystals"><img src="assets/images/portfolio_03_scaled.jpg" alt="Image 3"/><div class="txtCenter"><p><a href="homework4/unit-4-game/index.html" class="txtMedium txtWhite" target="_blank">Crystals</a></p></div></li>
+                    <li id="techQuiz"><img src="assets/images/portfolio_01_scaled.jpg" alt="Image 1" /><div class="txtCenter"><p><a href="homework5/TriviaGame/index.html" class="txtMedium txtWhite" target="_blank">Quiz</a></p></div></li>
+                    <li id="techGifTastic"><img src="assets/images/portfolio_02_scaled.jpg" alt="Image 2" /><div class="txtCenter"><p><a href="homework6/GifTastic/index.html" class="txtMedium txtWhite" target="_blank">GifTastic</a></p></div></li>
+                    <li id="techScheduler"><img src="assets/images/portfolio_05_scaled.jpg" alt="Image 5"/><div class="txtCenter"><p><a href="homework7/trainScheduler/index.html" class="txtMedium txtWhite" target="_blank">Scheduler</a></p></div></li>
+                    <li id="techGroupProject1"><img src="assets/images/portfolio_06_scaled.jpg" alt="Image 6"/><div class="txtCenter"><p><a href="https://Syeda03.github.io/hhjss" class="txtMedium txtWhite" target="_blank">Group Project #1</a></p></div></li>
+                </ul><br style="clear:both;" />
             </div>
+            <div id="portfolioTechnology"></div>
         </div>
     </section>
 
     <footer id="footer" class="txtCenter txtWhite txtSmall">
        <p>Copyright &copy; 2018</p>
     </footer>
+
+<!-- JavaScript -->
+<script src="assets/scripts/app.js"></script>
 
 </body>
 

@@ -2,14 +2,13 @@
 .txtRight { text-align:right; }
 .txtLarge, h1, h2 { font-size: 40px; font-family: 'Georgia', Times, Times New Roman, serif; }
 .txtMedium { font-size:1.2em; }
-.txtSmall { font-size: 10px; }
+.txtSmall { font-size: 12px; }
 .txtWhite { color:#fff; }
 .txtGrey { color:#777; }
 .txtLightGrey { color:#ddd; }
 .txtGreen { color:#4aaaa5; }
-.txtBold { font-weight: bold; }
+.txtBold,strong { font-weight: bold; }
 .txtLineHeight { line-height:2.0em; } 
-
 
 html { background-color:#000; }
 body { 
@@ -109,8 +108,8 @@ width:270px;
 }
 
 #portfolioWrapper  {
-    max-width: 550px;
-    min-height: 550px;
+    max-width: 750px;
+    min-height: 450px;
 }
 
 #portfolioWrapper ul {
@@ -157,6 +156,16 @@ width:270px;
 }
 #portfolioWrapper li a:hover {
     text-decoration: underline;
+}
+
+#portfolioTechnology { padding:10px 15px 10px 15px; line-height:1.8em; }
+#portfolioTechnology h3 {
+    font-weight:700;
+    font-size:1.4em;
+    color:#fff;
+}
+#portfolioTechnology p {
+    color:#fff;
 }
 
 /* #################  CONTACT  ########################## */
@@ -237,7 +246,7 @@ width:270px;
     #headerContent,#mainContentABOUT, #mainContentPORTFOLIO, #mainContentCONTACT  { margin: 0px 40px; }
     #headerContent { width: auto; }
     #headerNavigation.txtRight { text-align:center; }
-    #portfolioWrapper { min-height: 950px; }
+    #portfolioWrapper { min-height: 1150px; }
 }
 /* Landscape phone to portrait tablet */
 @media (min-width: 640px) and (max-width: 768px) {
@@ -250,7 +259,7 @@ width:270px;
     #headerNavigation { float: left; height: 90px; line-height: 35px; }
     #nav-smalllinks { display:inline-block; }
     #mainContentABOUT h2, #mainContentPORTFOLIO h2, #mainContentCONTACT h2 {clear:both;}
-    #portfolioWrapper { min-height: 950px; }
+    #portfolioWrapper { min-height: 1150px; }
 }
 /* Landscape phones and down */
 @media (max-width: 640px) {
@@ -263,7 +272,7 @@ width:270px;
     #headerNavigation { float:left; height:90px; line-height:35px;  width:320px; }
     #nav-smalllinks { display:inline-block; }
     #mainContentABOUT h2, #mainContentPORTFOLIO h2, #mainContentCONTACT h2 {clear:both;}
-    #portfolioWrapper { min-height: 950px; }
+    #portfolioWrapper { min-height: 1150px; }
     #mainContentABOUT img { display:none; }
 }
 
