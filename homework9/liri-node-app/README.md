@@ -1,91 +1,273 @@
-## Updated Portfolio Page
+LIRI Bot
+Overview
 
-### Overview
+In this assignment, you will make LIRI. LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a Language Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data.
 
-Now that you've had some practice with HTML and have a project to share, you'll be updating your portfolio page and other materials to build toward being employer competitive.
 
-If you are opting out of career services, this is *still a required assignment*. Part of being a web developer means being a part of a community. Having a place to share your projects is *necessary* if you're applying for jobs, but is still *critical* on your journey as a developer.
+Before You Begin
+LIRI will display your latest tweets. As we do not want to display your personal account, or its keys, please make an alias account and add a few tweets to it!
+Make a new GitHub repository called liri-node-app and clone it to your computer.
+To retrieve the data that will power this app, you'll need to send requests to the Twitter, Spotify and OMDB APIs. You'll find these Node packages crucial for your assignment.
 
-### Before you Begin
+Twitter
+Node-Spotify-API
 
-* Pin some repos that you want to share
+Request
+You'll use Request to grab data from the OMDB API.
 
-  * Navigate to your [GitHub Profile](https://github.com/USERNAME?tab=repositories)
+DotEnv
 
-  * Click "Customize your pinned repositories"
 
-  * Click the "Repositories you contribute to" checkbox (this will allow you to "pin" Project 1 even if you aren't the "owner")
 
-  * Click the checkboxes for your project and 2-3 homework assignments that you would like to share
+Submission on BCS
 
-  * Make sure each of these projects is deployed and add a link to the deployed project in their README files
 
-* Revisit your portfolio page
+Please submit the link to the Github Repository!
 
-  * Open up your old portfolio page
 
-  * Read through the rest of the homework requirements and decide whether you can update your existing portfolio page or if you want to start fresh now that you've had some more HTML/CSS practice (you may also want to change it to be a single page instead of multiple pages or you might even want to consider using a paid theme)
 
-### Required: Update your Portfolio Site -- Employer Ready
+Instructions
 
-To receive a passing grade on this assignment, you should meet the following
-content and design requirements. These are aligned with what you will need to be
-[employer ready](https://drive.google.com/file/d/0BwhzeIUMYf1nV2JQcGdkU3ktcnFBLUZ4X09VSXliTUtJZWsw/view).
 
-#### Content
+Navigate to the root of your project and run npm init -y — this will initialize a package.json file for your project. The package.json file is required for installing third party npm packages and saving their version numbers. If you fail to initialize a package.json file, it will be troublesome, and at times almost impossible for anyone else to run your code after cloning your project.
+Make a .gitignore file and add the following lines to it. This will tell git not to track these files, and thus they won't be committed to Github.
 
-Your updated site should have the following content:
 
-* Your name
+node_modules
+.DS_Store
+.env
 
-* Links to your GitHub profile & LinkedIn page as well as your email address
+Make a JavaScript file named keys.js.
 
-* List of projects. For each project make sure you have the following:
 
-  * Project title
 
-  * Link to the deployed version
+Inside keys.js your file will look like this:
 
-  * Link to the code on GitHub
 
-#### Design
+console.log('this is loaded');
 
-The content of your portfolio page is a lot more important than the aesthetics. That said, there are a couple basic requirements your portfolio page should meet:
+exports.twitter = {
+  consumer_key: process.env.TWITTER_CONSUMER_KEY,
+  consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+  access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+  access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
+};
 
-* Mobile-friendliness: you don't need advanced responsive styles, but you should ensure that your portfolio page is still readable on different screen sizes
+exports.spotify = {
+  id: process.env.SPOTIFY_ID,
+  secret: process.env.SPOTIFY_SECRET
+};
 
-* Readability: make sure the font size is large enough to read, and that the colors don't cause eye strain.
+Next, create a file named .env, add the following to it, replacing the values with your API keys (no quotes) once you have them:
 
-### Suggested: Update Portfolio -- Employer Competitive
 
-To receive an "A" on this assignment, you should also meet the following requirements
-to ensure your portfolio site will help you be [employer competitive](https://drive.google.com/file/d/0BwhzeIUMYf1nV2JQcGdkU3ktcnFBLUZ4X09VSXliTUtJZWsw/view).
+# Spotify API keys
 
-#### Competitive Content
+SPOTIFY_ID=your-spotify-id
+SPOTIFY_SECRET=your-spotify-secret
 
-* At least 3 deployed projects
+# Twitter API keys
 
-* External content:
+TWITTER_CONSUMER_KEY=your-twitter-consumer-key
+TWITTER_CONSUMER_SECRET=your-twitter-consumer-secret
+TWITTER_ACCESS_TOKEN_KEY=your-access-token-key
+TWITTER_ACCESS_TOKEN_SECRET=your-twitter-access-token-secret
 
-  * Update your LinkedIn with the projects you've worked on so far
 
-  * Update the README for each project you linked to with a description of the problem,
-  how you solved it, and some information about your technical approach
+This file will be used by the dotenv package to set what are known as environment variables to the global process.env object in node. These are values that are meant to be specific to the computer that node is running on, and since we are gitignoring this file, they won't be pushed to github — keeping our API key information private.
+If someone wanted to clone your app from github and run it themselves, they would need to supply their own .env file for it to work.
 
-  * Suggested: refactor some of your code from earlier assignments to make them more readable
 
-#### Competitive Design
 
-Unfortunately, this is where it gets a little bit subjective. Your site should look
-"polished." Here are a few guidelines on what that means:
+Get your Twitter API keys by following these steps:
 
-* Mobile-first design: you should be proud to pull out your phone and share
-your portfolio site with a friend, family member, or someone at a meetup.
 
-* Polish: choose a color palette for your site so it doesn't just look like
-the default bootstrap theme or an unstyled HTML site.
 
-* Images: add a meaningful screenshot for each of your projects
+Step One: Visit https://apps.twitter.com/app/new
+Step Two: Fill out the form with dummy data. Type http://google.com in the Website input. Don't fill out the Callback URL input. Then submit the form.
 
-If you want a slick-looking site, but don't feel good about your CSS skills,
-check out CV, Resume, and Portfolio site templates on [ThemeForest](https://themeforest.net/category/site-templates?tags=cv,resume,portfolio)
+Step Three: On the next screen, click the Keys and Access Tokens tab to get your consume key and secret. 
+
+
+Copy and paste them into your .env file, replacing the your-twitter-consumer-key and your-twitter-consumer-secret placeholders.
+
+
+
+Step Four: At the bottom of the page, click the Create my access token button to get your access token key and secret. 
+
+
+Copy the access token key and secret displayed at the bottom of the next screen. Paste them into your .env file, replacing the placeholders for your-twitter-access-token-key and your-twitter-access-token-secret.
+
+
+
+
+
+Make a file called random.txt.
+
+
+
+
+Inside of random.txt put the following in with no extra characters or white space:
+
+
+spotify-this-song,"I Want it That Way"
+
+
+
+
+
+Make a JavaScript file named liri.js.
+At the top of the liri.js file, add code to read and set any environment variables with the dotenv package:
+
+
+require("dotenv").config();
+
+Add the code required to import the keys.js file and store it in a variable.
+
+
+
+You should then be able to access your keys information like so
+
+
+  var spotify = new Spotify(keys.spotify);
+  var client = new Twitter(keys.twitter);
+
+Make it so liri.js can take in one of the following commands:
+
+
+* `my-tweets`
+
+* `spotify-this-song`
+
+* `movie-this`
+
+* `do-what-it-says`
+
+What Each Command Should Do
+
+
+node liri.js my-tweets
+
+
+
+This will show your last 20 tweets and when they were created at in your terminal/bash window.
+
+
+
+node liri.js spotify-this-song '<song name here>'
+
+
+
+
+This will show the following information about the song in your terminal/bash window
+
+
+Artist(s)
+The song's name
+A preview link of the song from Spotify
+The album that the song is from
+
+
+If no song is provided then your program will default to "The Sign" by Ace of Base.
+You will utilize the node-spotify-api package in order to retrieve song information from the Spotify API.
+Like the Twitter API, the Spotify API requires you sign up as a developer to generate the necessary credentials. You can follow these steps in order to generate a client id and client secret:
+Step One: Visit https://developer.spotify.com/my-applications/#!/
+Step Two: Either login to your existing Spotify account or create a new one (a free account is fine) and log in.
+Step Three: Once logged in, navigate to https://developer.spotify.com/my-applications/#!/applications/create to register a new application to be used with the Spotify API. You can fill in whatever you'd like for these fields. When finished, click the "complete" button.
+Step Four: On the next screen, scroll down to where you see your client id and client secret. Copy these values down somewhere, you'll need them to use the Spotify API and the node-spotify-api package.
+
+
+
+node liri.js movie-this '<movie name here>'
+
+
+
+
+This will output the following information to your terminal/bash window:
+
+   * Title of the movie.
+   * Year the movie came out.
+   * IMDB Rating of the movie.
+   * Rotten Tomatoes Rating of the movie.
+   * Country where the movie was produced.
+   * Language of the movie.
+   * Plot of the movie.
+   * Actors in the movie.
+
+
+If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
+
+
+If you haven't watched "Mr. Nobody," then you should: http://www.imdb.com/title/tt0485947/
+
+It's on Netflix!
+
+
+You'll use the request package to retrieve data from the OMDB API. Like all of the in-class activities, the OMDB API requires an API key. You may use trilogy.
+
+
+
+node liri.js do-what-it-says
+
+
+
+
+Using the fs Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
+
+
+It should run spotify-this-song for "I Want it That Way," as follows the text in random.txt.
+Feel free to change the text in that document to test out the feature for other commands.
+
+
+
+
+
+BONUS
+
+
+In addition to logging the data to your terminal/bash window, output the data to a .txt file called log.txt.
+Make sure you append each command you run to the log.txt file. 
+Do not overwrite your file each time you run a command.
+
+
+
+Reminder: Submission on BCS
+
+
+Please submit the link to the Github Repository!
+
+
+
+
+
+Minimum Requirements
+
+Attempt to complete homework assignment as described in instructions. If unable to complete certain portions, please pseudocode these portions to describe what remains to be completed. Adding a README.md as well as adding this homework to your portfolio are required as well and more information can be found below.
+
+
+
+
+Create a README.md
+
+Add a README.md to your repository describing the project. Here are some resources for creating your README.md. Here are some resources to help you along the way:
+
+
+About READMEs
+Mastering Markdown
+
+
+
+
+
+Add To Your Portfolio
+
+After completing the homework please add the piece to your portfolio. Make sure to add a link to your updated portfolio in the comments section of your homework so the TAs can easily ensure you completed this step when they are grading the assignment. To receive an 'A' on any assignment, you must link to it from your portfolio.
+
+
+
+
+One More Thing
+
+If you have any questions about this project or the material we have covered, please post them in the community channels in slack so that your fellow developers can help you! If you're still having trouble, you can come to office hours for assistance from your instructor and TAs.
+
+Good Luck!

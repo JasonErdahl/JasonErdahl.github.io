@@ -1,7 +1,4 @@
-var spotify = new Spotify(keys.spotify);
-var client = new Twitter(keys.twitter);
-
-console.log('this is loaded');
+console.log('keys.js is loaded');
 
 exports.twitter = {
   consumer_key: process.env.TWITTER_CONSUMER_KEY,

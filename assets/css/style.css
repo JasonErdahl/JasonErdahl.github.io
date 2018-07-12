@@ -48,7 +48,7 @@ float:right;
 height:90px;
 line-height: 90px;
 vertical-align: middle;
-width:270px;
+width: 300px;
 }
 
 /* #################  HEADER NAVIGATION  ########################## */
@@ -219,12 +219,21 @@ width:270px;
 }
 
 #footer p{
-    position: absolute;
+    /* position: absolute;
     bottom: 10px;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, 0);*/
 }
+#footer .floatLeft {
+    float: left;
+    width: 150px;
+    margin: 20px 0 0 45%;
+}
+#footer .floatRight {float:right; width:200px;}
+#footer #social li { display: inline-block; margin:20px 10px 0px 10px; }
 
+.fa-linkedin, .fa-github-alt, .fa-stack-overflow { color: #fff;}
+.fa-linkedin:hover, .fa-github-alt:hover, .fa-stack-overflow:hover { color: #4aaaa5;}
 .clearfix { content:""; display:block; clear: both;}
 
 
@@ -260,6 +269,7 @@ width:270px;
     #nav-smalllinks { display:inline-block; }
     #mainContentABOUT h2, #mainContentPORTFOLIO h2, #mainContentCONTACT h2 {clear:both;}
     #portfolioWrapper { min-height: 1150px; }
+    #footer .floatRight { width: auto; }
 }
 /* Landscape phones and down */
 @media (max-width: 640px) {
@@ -274,6 +284,8 @@ width:270px;
     #mainContentABOUT h2, #mainContentPORTFOLIO h2, #mainContentCONTACT h2 {clear:both;}
     #portfolioWrapper { min-height: 1150px; }
     #mainContentABOUT img { display:none; }
+    #footer .floatLeft { margin: 20px 0 0 5%;}
+    #footer .floatRight { width: auto; }
 }
 
 /* 
