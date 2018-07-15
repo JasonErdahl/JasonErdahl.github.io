@@ -6,10 +6,10 @@ var Twitter = require('twitter');
 var keys = require("./keys.js");
 
 // INSTRUCTIONS:
-// RUN: npm install request
-//      npm install dotenv
-//      npm install twitter
-//      npm install --save node-spotify-api
+// ###  RUN:    npm install request
+//              npm install dotenv
+//              npm install twitter
+//              npm install --save node-spotify-api
 // INPUTS
 //      my-tweets
 //      spotify-this-song
@@ -21,34 +21,32 @@ var action = process.argv[2];
 //var value = process.argv[3];
 var value = valueStringify('plus');
 
-callLIRI(action,value);
 
 // We will then create a switch-case statement.
 // The switch-case will direct which function gets run.
-function callLIRI (action,value) {
-    switch (action) {
-        case "my-tweets":
-        addToLog(fileName,action,value);
-        myTweets();
-        break;
 
-        case "spotify-this-song":
-        addToLog(fileName,action,value);
-        spotifyThisSong(value);
-        break;
+switch (action) {
+    case "my-tweets":
+    addToLog(fileName,action,value);
+    myTweets();
+    break;
 
-        case "movie-this":
-        addToLog(fileName,action,value);
-        movieThis(value);
-        break;
+    case "spotify-this-song":
+    addToLog(fileName,action,value);
+    spotifyThisSong(value);
+    break;
 
-        case "do-what-it-says":
-        addToLog(fileName,action,value);
-        doWhatItSays();
-        break;
+    case "movie-this":
+    addToLog(fileName,action,value);
+    movieThis(value);
+    break;
 
-        default: addToLog(fileName,action,value);
-    }
+    case "do-what-it-says":
+    addToLog(fileName,action,value);
+    doWhatItSays();
+    break;
+
+    default: addToLog(fileName,action,value);
 }
 
 // If the "myTweets" function is called...
@@ -61,12 +59,16 @@ function myTweets() {
     var client = new Twitter(keys.twitter);
     // Then run a request to the myTweets API
     client.get('statuses/user_timeline', function(error, tweets, response) {
-
+        // if (!error && response.statusCode === 200) {
+        //     log('tweets: '+tweets);
+        //     log('response: '+response);
+        // }
         if (error) {log(error)} else {
             var currentTweet,currentDate;
             var tweetLength = tweets.length;
             var init = JSON.stringify(tweets);
-
+            //log('tweets: '+JSON.stringify(tweets));
+            //log('tweetLength: '+tweetLength);
             for (var i = 0; i < tweetLength; i++) {
                 currentTweet = JSON.stringify(tweets[i].text);
                 currentDate = JSON.stringify(tweets[i].created_at);
@@ -190,10 +192,10 @@ function doWhatItSays() {
         var liriOperation = dataArr[0];
         var liriValue = dataArr[1];
         // We will then re-display the content as an array for later use.
-        // console.log('dataArr: '+dataArr);
-        // console.log('liriOperation: '+liriOperation);
-        // console.log('liriValue: '+liriValue);
-        callLIRI (liriOperation,liriValue)
+        console.log('dataArr: '+dataArr);
+        console.log('liriOperation: '+liriOperation);
+        console.log('liriValue: '+liriValue);
+
 
     });
  
@@ -211,9 +213,8 @@ function addToLog(fileName,action,value) {
         day = currentDate.getDate(),
         month = currentDate.getMonth() + 1,
         year = currentDate.getFullYear(),
-        hours = ('0'+currentDate.getHours()).substr(-2);
-        minutes = ('0'+currentDate.getMinutes()).substr(-2);
-
+        hours = currentDate.getHours(),
+        minutes = currentDate.getMinutes();
     var timeStamp = (day + "/" + month + "/" + year +" "+ hours + ":" + minutes);
     var bashCommand = ("node "+fileNameOnly+" "+action+" "+value+" "+timeStamp+"\n");
     fs.appendFile("log.txt", bashCommand, function(err) {

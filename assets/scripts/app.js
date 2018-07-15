@@ -30,6 +30,11 @@ $("#portfolioWrapper li").mouseenter(function(){
             htmlOutput += ('<p><strong>Role</strong>: Back End Logic</p>');
             htmlOutput += ('<p>HTML, CSS, Media Queries, Javascript, jQuery, Objects, Bootstrap, Materialize, Firebase, AJAX, JSON, YELP API, Open Weather Map API</p>');
             break;
+        case "techLIRI":
+            htmlOutput += ('<h3>LIRI - Language Interpretation and Recognition Interface</h3>');
+            htmlOutput += ('<p>Javascript, Node.js, NPM(request, dotenv, twitter, spotify), API(Twitter, Spotify, OMDB), JSON, Objects, Arrays, gitignore, package.json</p>');
+            break;
+        default:  htmlOutput += ('<p>No Data</p>');
     }
 
     $('#portfolioTechnology').html(htmlOutput);

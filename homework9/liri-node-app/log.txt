@@ -27,3 +27,88 @@ node liri.js my-tweets  12/7/2018 15:30
 node liri.js my-tweets  12/7/2018 15:39
 node liri.js my-tweets  12/7/2018 15:46
 node liri.js my-tweets  12/7/2018 16:13
+node liri.js my-tweets  12/7/2018 17:8
+node liri.js my-tweets  12/7/2018 17:19
+node liri.js my-tweets  12/7/2018 17:20
+node liri.js ny-tweets  12/7/2018 17:36
+node liri.js my-tweets  12/7/2018 17:36
+node liri.js my-tweets  12/7/2018 17:38
+node liri.js my-tweets  12/7/2018 17:46
+node liri.js my-tweets  12/7/2018 17:49
+node liri.js my-tweets  12/7/2018 18:5
+node liri.js my-tweets  12/7/2018 18:16
+node liri.js my-tweets  12/7/2018 18:19
+node liri.js my-tweets  12/7/2018 18:20
+node liri.js my-tweets  12/7/2018 18:22
+node liri.js my-tweets  12/7/2018 18:23
+node liri.js my-tweets  12/7/2018 18:25
+node liri.js my-tweets  13/7/2018 7:58
+node liri.js my-tweets  13/7/2018 7:58
+node liri.js my-tweets  13/7/2018 8:1
+node liri.js my-tweets  13/7/2018 8:15
+node liri.js my-tweets  13/7/2018 8:19
+node liri.js my-tweets  13/7/2018 8:21
+node liri.js my-tweets  13/7/2018 8:25
+node liri.js my-tweets  13/7/2018 8:27
+node liri.js my-tweets  13/7/2018 8:28
+node liri.js my-tweets  13/7/2018 8:29
+node liri.js my-tweets  13/7/2018 8:34
+node liri.js my-tweets  13/7/2018 8:35
+node liri.js my-tweets  13/7/2018 8:48
+node liri.js my-tweets  13/7/2018 8:49
+node liri.js spotify-this-song master+of+puppets 13/7/2018 8:55
+node liri.js undefined  13/7/2018 20:50
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 20:54
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 21:0
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 21:2
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 21:7
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 21:23
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 21:24
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 21:25
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 21:26
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 21:27
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 21:46
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 21:48
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 21:58
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 22:3
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 22:6
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 22:12
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 22:24
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 22:34
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 22:39
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 22:48
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 22:48
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 22:48
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 22:49
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 22:50
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 22:50
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 22:52
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 22:52
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 22:56
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 22:57
+node liri.js spotify-this-song brown+eyed+girl 13/7/2018 23:2
+node liri.js spotify-this-song brown+eyed+girl 14/7/2018 7:5
+node liri.js spotify-this-song brown+eyed+girl 14/7/2018 7:5
+node liri.js spotify-this-song brown+eyed+girl 14/7/2018 7:5
+node liri.js spotify-this-song brown+eyed+girl 14/7/2018 7:6
+node liri.js spotify-this-song brown+eyed+girl 14/7/2018 7:12
+node liri.js spotify-this-song brown+eyed+girl 14/7/2018 7:13
+node liri.js spotify-this-song brown+eyed+girl 14/7/2018 7:19
+node liri.js spotify-this-song noSONGshouldPlayHere 14/7/2018 7:22
+node liri.js spotify-this-song noSONGshouldPlayHere 14/7/2018 7:25
+node liri.js spotify-this-song noSONGshouldPlayHere 14/7/2018 7:25
+node liri.js spotify-this-song noSONGshouldPlayHere 14/7/2018 7:27
+node liri.js spotify-this-song noSONGshouldPlayHere 14/7/2018 7:33
+node liri.js spotify-this-song noSONGshouldPlayHere 14/7/2018 7:37
+node liri.js do-what-it-says  14/7/2018 7:42
+node liri.js do-what-it-says  14/7/2018 7:45
+node liri.js do-what-it-says  14/7/2018 7:48
+node liri.js do-what-it-says  14/7/2018 7:51
+node liri.js do-what-it-says  14/7/2018 7:52
+node liri.js do-what-it-says  14/7/2018 7:53
+node liri.js do-what-it-says  14/7/2018 7:59
+node liri.js do-what-it-says  14/7/2018 8:6
+node liri.js do-what-it-says  14/7/2018 8:17
+node liri.js spotify-this-song "I Want it That Way" 14/7/2018 8:17
+node liri.js spotify-this-song noSONGshouldPlayHere 14/7/2018 8:18
+node liri.js spotify-this-song brown+eyed+girl 14/7/2018 8:18
