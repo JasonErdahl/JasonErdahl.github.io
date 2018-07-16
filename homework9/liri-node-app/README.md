@@ -1,6 +1,6 @@
 ### LIRI Bot
 ### Use
-Local File:   /Documents/coding_class/JasonErdahl.github.io/homework9/liri-node-app
+Local File:   /Documents/coding_class/JasonErdahl.github.io/homework9/liri-node-app/liri-node-app
 GitHub File:  https://github.com/JasonErdahl/JasonErdahl.github.io/tree/master/homework9
 Tweets:       node liri.js my-tweets
 Spotify:      node liri.js spotify-this-song '<song name here>'
