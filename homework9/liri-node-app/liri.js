@@ -19,7 +19,7 @@ var keys = require("./keys.js");
 var fileName = process.argv[1];
 var action = process.argv[2];
 //var value = process.argv[3];
-var value = valueStringify('plus');
+var value = valueStringify('plus'); // get multi-word input and join with plus sign for API use.
 
 callLIRI(action,value);
 
@@ -57,7 +57,7 @@ function callLIRI (action,value) {
 // URL: https://apps.twitter.com/
 // URL: https://www.npmjs.com/package/twitter
 function myTweets() {
-    log(" function *myTweets* ");
+    log(" * myTweets * ");
     var client = new Twitter(keys.twitter);
     // Then run a request to the myTweets API
     client.get('statuses/user_timeline', function(error, tweets, response) {
@@ -71,6 +71,7 @@ function myTweets() {
                 currentTweet = JSON.stringify(tweets[i].text);
                 currentDate = JSON.stringify(tweets[i].created_at);
                 log('Tweet'+(i+1)+': '+currentTweet+''+currentDate);
+                log(" * -------------------------- * ");
             }
         }
     });
@@ -86,7 +87,7 @@ function myTweets() {
 // If no song is provided then your program will default to "The Sign" by Ace of Base.
 // URL: https://www.npmjs.com/package/node-spotify-api
 function spotifyThisSong(value) {
-    log(" function *spotifyThisSong* ");
+    log(" * spotifyThisSong * ");
     var spotify = new Spotify(keys.spotify);
 
     spotify.search({ type: 'track', query: value }, function(err, data) {
@@ -133,8 +134,8 @@ function spotifyThisSong(value) {
 // If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
 // If you haven't watched "Mr. Nobody," then you should: http://www.imdb.com/title/tt0485947/
 function movieThis(value) {
-    log(" function *movieThis* ");
-    log("valueArray: "+valueStringify());
+    log(" * movieThis * ");
+    //log("valueArray: "+valueStringify());
     // Then run a request to the OMDB API with the movie specified
     request("http://www.omdbapi.com/?t="+value+"&y=&plot=short&apikey=trilogy", function(error, response, body) {
         // If the request is successful (i.e. if the response status code is 200)
@@ -176,13 +177,13 @@ function movieThis(value) {
 // It should run spotify-this-song for "I Want it That Way," as follows the text in random.txt.
 // Feel free to change the text in that document to test out the feature for other commands.
 function doWhatItSays() {
-    log(" function *doWhatItSays* ");
+    log(" * doWhatItSays * ");
 
     fs.readFile("random.txt", "utf8", function(err, data) {
         if (err) {
             return log(err);
         }
-        log(data);
+        //log(data);
 
         // Then split it by commas (to make it more readable)
 
@@ -205,16 +206,16 @@ function doWhatItSays() {
 // Make sure you append each command you run to the log.txt file. 
 // Do not overwrite your file each time you run a command.
 function addToLog(fileName,action,value) {
-    log(" function *addToLog* ");
+    // log(" *addToLog* ");
     var fileNameOnly = fileName.split("\\").pop();
     var currentDate = new Date(),
         day = currentDate.getDate(),
         month = currentDate.getMonth() + 1,
         year = currentDate.getFullYear(),
-        hours = ('0'+currentDate.getHours()).substr(-2);
-        minutes = ('0'+currentDate.getMinutes()).substr(-2);
+        hours = ('0'+currentDate.getHours()).substr(-2); //shows leading zero if single value
+        minutes = ('0'+currentDate.getMinutes()).substr(-2); //shows leading zero if single value
 
-    var timeStamp = (day + "/" + month + "/" + year +" "+ hours + ":" + minutes);
+    var timeStamp = (month + "/" + day + "/" + year +" "+ hours + ":" + minutes);
     var bashCommand = ("node "+fileNameOnly+" "+action+" "+value+" "+timeStamp+"\n");
     fs.appendFile("log.txt", bashCommand, function(err) {
         if (err) {

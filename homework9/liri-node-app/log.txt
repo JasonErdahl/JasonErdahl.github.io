@@ -112,3 +112,8 @@ node liri.js do-what-it-says  14/7/2018 8:17
 node liri.js spotify-this-song "I Want it That Way" 14/7/2018 8:17
 node liri.js spotify-this-song noSONGshouldPlayHere 14/7/2018 8:18
 node liri.js spotify-this-song brown+eyed+girl 14/7/2018 8:18
+node liri.js spotify-this-song vast+touched 15/7/2018 10:55
+node liri.js spotify-this-song vast+touched 7/16/2018 08:10
+node liri.js my-tweets  7/16/2018 08:13
+node liri.js movie-this ant+man 7/16/2018 08:18
+node liri.js movie-this ant+man 7/16/2018 08:29
