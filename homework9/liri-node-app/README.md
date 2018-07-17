@@ -1,11 +1,17 @@
 ### LIRI Bot
 ### Use
-Local File:   /Documents/coding_class/JasonErdahl.github.io/homework9/liri-node-app/liri-node-app
-GitHub File:  https://github.com/JasonErdahl/JasonErdahl.github.io/tree/master/homework9
+Local Folder:   /Documents/coding_class/JasonErdahl.github.io/homework9/liri-node-app/liri-node-app
+
+GitHub Folder:  https://github.com/JasonErdahl/JasonErdahl.github.io/tree/master/homework9
+
 Tweets:       node liri.js my-tweets
+
 Spotify:      node liri.js spotify-this-song '<song name here>'
+
 OMDB:         node liri.js movie-this '<movie name here>'
+
 DoWhatItSays: node liri.js do-what-it-says (reads random.txt)
+
 
 ### Overview
 In this assignment, you will make LIRI. LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a Language Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data.

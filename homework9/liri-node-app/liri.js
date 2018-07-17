@@ -38,8 +38,8 @@ function callLIRI (action,value) {
         break;
 
         case "movie-this":
-        addToLog(fileName,action,value);
-        movieThis(value);
+        addToLog(fileName,action,valueStringify('comma'));
+        movieThis(valueStringify('comma'));
         break;
 
         case "do-what-it-says":
@@ -70,7 +70,7 @@ function myTweets() {
             for (var i = 0; i < tweetLength; i++) {
                 currentTweet = JSON.stringify(tweets[i].text);
                 currentDate = JSON.stringify(tweets[i].created_at);
-                log('Tweet'+(i+1)+': '+currentTweet+''+currentDate);
+                log('Tweet '+(i+1)+': '+currentTweet+''+currentDate);
                 log(" * -------------------------- * ");
             }
         }
@@ -139,6 +139,7 @@ function movieThis(value) {
     // Then run a request to the OMDB API with the movie specified
     request("http://www.omdbapi.com/?t="+value+"&y=&plot=short&apikey=trilogy", function(error, response, body) {
         // If the request is successful (i.e. if the response status code is 200)
+        
         if (!error && response.statusCode === 200) {
             var init = JSON.parse(body);
             var response = init.Response;

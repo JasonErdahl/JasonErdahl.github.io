@@ -117,3 +117,16 @@ node liri.js spotify-this-song vast+touched 7/16/2018 08:10
 node liri.js my-tweets  7/16/2018 08:13
 node liri.js movie-this ant+man 7/16/2018 08:18
 node liri.js movie-this ant+man 7/16/2018 08:29
+node liri.js my-tweets  7/17/2018 17:13
+node liri.js my-tweets  7/17/2018 17:18
+node liri.js my-tweets  7/17/2018 17:35
+node liri.js my-tweets  7/17/2018 17:40
+node liri.js spotify-this-song master+of+puppets 7/17/2018 17:41
+node liri.js movie-this fist+full+of+dollars 7/17/2018 17:42
+node liri.js movie-this jaws 7/17/2018 17:42
+node liri.js movie-this jaws 7/17/2018 17:44
+node liri.js movie-this fist,full,of,dollars 7/17/2018 17:44
+node liri.js movie-this fist,full,of,dollars 7/17/2018 17:47
+node liri.js movie-this mr,nobody 7/17/2018 17:49
+node liri.js do-what-it-says  7/17/2018 17:50
+node liri.js spotify-this-song "I Want it That Way" 7/17/2018 17:50
