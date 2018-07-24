@@ -34,6 +34,10 @@ $("#portfolioWrapper li").mouseenter(function(){
             htmlOutput += ('<h3>LIRI - Language Interpretation and Recognition Interface</h3>');
             htmlOutput += ('<p>Javascript, Node.js, NPM(request, dotenv, twitter, spotify), API(Twitter, Spotify, OMDB), JSON, Objects, Arrays, gitignore, package.json</p>');
             break;
+        case "techNodeWordGuess":
+            htmlOutput += ('<h3>Word Guess - Node.JS </h3>');
+            htmlOutput += ('<p>Javascript, Node.js, NPM(request, inquirer), Constructors, Arrays, gitignore, package.json</p>');
+            break;
         default:  htmlOutput += ('<p>No Data</p>');
     }
 
