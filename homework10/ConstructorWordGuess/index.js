@@ -44,7 +44,7 @@ function resetGame() {
     console.log(' -        Word Guess          -');
     console.log(' - *** MOVIE ADJECTIVES ***   -');
     console.log(' ------------------------------');
-    console.log(' resetGame: '+targetWord);
+    //console.log(' resetGame: '+targetWord);
     target = new Word(targetWord);
     target.makeGuess(' ');
     guesses = [];
@@ -52,13 +52,13 @@ function resetGame() {
 }
 
 function promptUser() {
-    console.log('target.allGuessedOut():'+ target.allGuessedOut());
+    // console.log('target.allGuessedOut():'+ target.allGuessedOut());
     if (!target.allGuessedOut() && guessesLeft > 0) {
-        console.log('\n ' + target + '\n'); // Display the hidden/unmasked word
+        console.log('\n ' + target + '\n'); // Display the masked/unmasked word
     }
     
     inquirer.prompt(questions).then(answers => {
-        console.log('answers.playAgain ' + answers.playAgain);
+        //console.log('answers.playAgain ' + answers.playAgain);
         if ('playAgain' in answers && !answers.playAgain) {
             console.log(' Thanks for playing');
             process.exit();
