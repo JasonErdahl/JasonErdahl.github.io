@@ -39,10 +39,10 @@ $("#portfolioWrapper li").mouseenter(function(){
             htmlOutput += ('<p>Javascript, Node.js, NPM(request, inquirer), Constructors, Arrays, gitignore, package.json</p>');
             break;
         case "techNodeMySQLBeAmazon":
-            htmlOutput += ('<h3>Be Amazon - Node.JS mySQL</h3>');
-            htmlOutput += ('<p>Javascript, Node.js, mySQL, NPM(request, inquirer, mysql), gitignore, package.json</p>');
+            htmlOutput += ('<h3>Be Amazon - Amazon-like storefront</h3>');
+            htmlOutput += ('<p>Javascript, Node.js, mySQL, MAMP, NPM(request, inquirer, mysql), gitignore, package.json</p>');
             break;
-        default:  htmlOutput += ('<p>No Data</p>');
+        default:  htmlOutput += ('<p style="color:red;">No Data</p>');
     }
 
     $('#portfolioTechnology').html(htmlOutput);
