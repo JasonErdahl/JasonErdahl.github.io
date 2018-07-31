@@ -43,6 +43,7 @@ function viewItems() {
     //   rows[i].stock_quantity+"\n";
     // }
     // console.log("\n" +str);
+    connection.end();
     bidAuction();
   });
 }
@@ -53,18 +54,16 @@ function start() {
     .prompt({
       name: "postOrBid",
       type: "rawlist",
-      message: "Would you like to [POST] an auction, [BID] on an auction or [VIEW] item(s)?",
-      choices: ["POST", "BID", "VIEW"]
+      message: "Would you like to purchase, another product [YES] on [NO]?",
+      choices: ["YES", "NO"]
     })
     .then(function(answer) {
       // based on their answer, either call the bid or the post functions
-      if (answer.postOrBid.toUpperCase() === "POST") {
-        postAuction();
-      }
-      else if (answer.postOrBid.toUpperCase() === "BID"){
+      if (answer.postOrBid.toUpperCase() === "YES") {
         bidAuction();
-      } else {
-        viewItems();
+      }
+      else if (answer.postOrBid.toUpperCase() === "NO"){
+        process.exit();
       }
     });
 }
@@ -72,7 +71,7 @@ function start() {
 function bidAuction() {
   // query the database for all items being auctioned
   connection.query("SELECT * FROM products", function(err, results) {
-    console.log('results[0].stock_quantity is: ', results[0].stock_quantity)
+    //console.log('results[0].stock_quantity is: ', results[0].stock_quantity)
     if (err) throw err;
     // once you have the items, prompt the user for which they'd like to bid on
     inquirer
@@ -101,35 +100,40 @@ function bidAuction() {
         for (var i = 0; i < results.length; i++) {
           if (results[i].product_name === answer.choice) {
             chosenItem = results[i];
-            console.log("answer.quantity: "+ answer.quantity);
+            //console.log("answer.quantity: "+ answer.quantity);
           }
         }
 
         // determine if bid was high enough
-        //console.log(chosenItem.stock_quantity + " : " + parseInt(answer.quantity));
+        var newItemNum = ( (parseInt(chosenItem.stock_quantity)) - (parseInt(answer.quantity)) );
+        //console.log("Item Test " +chosenItem.stock_quantity + " : " + answer.quantity);
+        //console.log("newItemNum: "+ newItemNum);
+        //console.log("chosenItem.item_id: "+ chosenItem.item_id);
         if (chosenItem.stock_quantity >= parseInt(answer.quantity)) {
           // bid was high enough, so update db, let the user know, and start over
           connection.query(
             "UPDATE products SET ? WHERE ?",
             [
               {
-                stock_quantity: answer.quantity
+                stock_quantity: newItemNum
               },
               {
-                item_id: chosenItem.id
+                item_id: chosenItem.item_id
               }
             ],
             function(error) {
               if (error) throw err;
-              console.log("Bid placed successfully!");
-              viewItems();
+              purchasePrice = (parseInt(chosenItem.price)*parseInt(answer.quantity));
+
+              console.log("\nPurchase was successful! You owe $"+purchasePrice+"\n\n");
+              start();
             }
           );
         }
         else {
           // bid wasn't high enough, so apologize and start over
-          console.log("Your bid was too low. Try again...");
-          viewItems();
+          console.log("\nOrder exceeds available products.\n\n");
+          start();
         }
       });
   });

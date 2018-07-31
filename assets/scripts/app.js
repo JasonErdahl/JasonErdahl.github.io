@@ -38,6 +38,10 @@ $("#portfolioWrapper li").mouseenter(function(){
             htmlOutput += ('<h3>Word Guess - Node.JS </h3>');
             htmlOutput += ('<p>Javascript, Node.js, NPM(request, inquirer), Constructors, Arrays, gitignore, package.json</p>');
             break;
+        case "techNodeMySQLBeAmazon":
+            htmlOutput += ('<h3>Be Amazon - Node.JS mySQL</h3>');
+            htmlOutput += ('<p>Javascript, Node.js, mySQL, NPM(request, inquirer, mysql), gitignore, package.json</p>');
+            break;
         default:  htmlOutput += ('<p>No Data</p>');
     }
 
