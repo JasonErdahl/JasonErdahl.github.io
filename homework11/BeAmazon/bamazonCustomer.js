@@ -43,7 +43,7 @@ function viewItems() {
     //   rows[i].stock_quantity+"\n";
     // }
     // console.log("\n" +str);
-    connection.end();
+    // connection.end();
     bidAuction();
   });
 }

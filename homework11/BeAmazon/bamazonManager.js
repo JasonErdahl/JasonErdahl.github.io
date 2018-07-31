@@ -103,7 +103,7 @@ function lowInventory() {
 }
 
 function addInventory() {
-  // query the database for all items being auctioned
+  // query the database for adding items to inventory
   connection.query("SELECT * FROM products", function(err, results) {
     //console.log('results[0].stock_quantity is: ', results[0].stock_quantity)
     if (err) throw err;
