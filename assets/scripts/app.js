@@ -42,6 +42,10 @@ $("#portfolioWrapper li").mouseenter(function(){
             htmlOutput += ('<h3>Be Amazon - Amazon-like storefront</h3>');
             htmlOutput += ('<p>Javascript, Node.js, mySQL, MAMP, NPM(request, inquirer, mysql), gitignore, package.json</p>');
             break;
+        case "techNodeHerokuFriendFinder":
+            htmlOutput += ('<h3>Find My Friend</h3>');
+            htmlOutput += ('<p>Heroku, Express, Node.js, Require.js, NPM(request, inquirer, body-parser, path)</p>');
+            break;
         default:  htmlOutput += ('<p style="color:red;">No Data</p>');
     }
 
