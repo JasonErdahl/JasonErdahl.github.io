@@ -46,6 +46,10 @@ $("#portfolioWrapper li").mouseenter(function(){
             htmlOutput += ('<h3>Find My Friend</h3>');
             htmlOutput += ('<p>Heroku, Express, Node.js, Require.js, NPM(request, inquirer, body-parser, path)</p>');
             break;
+        case "techNodeHerokuEatDaBurger":
+            htmlOutput += ('<h3>Eat Da Burger</h3>');
+            htmlOutput += ('<p>Heroku, mySQL, Handlebars, Bootstrap, Express, Node.js, Require.js, NPM(body-parser, express, express-handlebars, mysql)</p>');
+            break;    
         default:  htmlOutput += ('<p style="color:red;">No Data</p>');
     }
 
