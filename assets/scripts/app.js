@@ -49,7 +49,12 @@ $("#portfolioWrapper li").mouseenter(function(){
         case "techNodeHerokuEatDaBurger":
             htmlOutput += ('<h3>Eat Da Burger</h3>');
             htmlOutput += ('<p>Heroku, mySQL, Handlebars, Bootstrap, Express, Node.js, Require.js, NPM(body-parser, express, express-handlebars, mysql)</p>');
-            break;    
+            break; 
+        case "techNodeHerokuBurger2":
+            htmlOutput += ('<h3>Burger 2: The Sequel</h3>');
+            htmlOutput += ('<p>Heroku, mySQL, Sequelizer, Handlebars, Bootstrap, Express, Node.js, Require.js, NPM(body-parser, dotenv, express, express-handlebars, mysql2, sequelize)</p>');
+            break;
+
         default:  htmlOutput += ('<p style="color:red;">No Data</p>');
     }
 
