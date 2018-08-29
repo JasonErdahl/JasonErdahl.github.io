@@ -55,8 +55,8 @@ $("#portfolioWrapper li").mouseenter(function(){
             htmlOutput += ('<p>Heroku, mySQL, Sequelizer, Handlebars, Bootstrap, Express, Node.js, Require.js, NPM(body-parser, dotenv, express, express-handlebars, mysql2, sequelize)</p>');
             break;
         case "techNodeHerokuProject2":
-            htmlOutput += ('<h3>Burger 2: The Sequel</h3>');
-            htmlOutput += ('<p>Heroku, mySQL, Sequelizer, Handlebars, Bootstrap, Express, Node.js, Require.js, NPM(body-parser, dotenv, express, express-handlebars, mysql2, sequelize, mocha, chai, lint, prettier)</p>');
+            htmlOutput += ('<h3>Wind Farm STP: Group Project 2</h3>');
+            htmlOutput += ('<p>TEAM: Jag, Paul, Anh, Jason</p><p>Heroku, mySQL, Sequelizer, Handlebars, Bootstrap, Express, Node.js, Require.js, NPM(body-parser, dotenv, express, express-handlebars, mysql2, sequelize, mocha, chai, lint, prettier)</p>');
             break;
 
         default:  htmlOutput += ('<p style="color:red;">No Data</p>');
