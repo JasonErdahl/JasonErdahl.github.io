@@ -26,8 +26,8 @@ $("#portfolioWrapper li").mouseenter(function(){
             htmlOutput += ('<p>HTML, CSS, Media Queries, Javascript, jQuery, Bootstrap, Moment.js, Google Fonts, Firebase</p>');
             break;
         case "techGroupProject1":
-            htmlOutput += ('<h3>Group Project #1 Technologies</h3>');
-            htmlOutput += ('<p><strong>Role</strong>: Back End Logic</p>');
+            htmlOutput += ('<h3>The Beaten Path - Group Project 1</h3>');
+            htmlOutput += ('<p>TEAM: Sabeen, Hamdi, Halle, Jason</p>');
             htmlOutput += ('<p>HTML, CSS, Media Queries, Javascript, jQuery, Objects, Bootstrap, Materialize, Firebase, AJAX, JSON, YELP API, Open Weather Map API</p>');
             break;
         case "techLIRI":
