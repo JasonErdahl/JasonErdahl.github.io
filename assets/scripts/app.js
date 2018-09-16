@@ -44,19 +44,23 @@ $("#portfolioWrapper li").mouseenter(function(){
             break;
         case "techNodeHerokuFriendFinder":
             htmlOutput += ('<h3>Find My Friend</h3>');
-            htmlOutput += ('<p>Heroku, Express, Node.js, Require.js, NPM(request, inquirer, body-parser, path)</p>');
+            htmlOutput += ('<p>Heroku, Express.js, Node.js, Require.js, NPM(request, inquirer, body-parser, path)</p>');
             break;
         case "techNodeHerokuEatDaBurger":
             htmlOutput += ('<h3>Eat Da Burger</h3>');
-            htmlOutput += ('<p>Heroku, mySQL, Handlebars, Bootstrap, Express, Node.js, Require.js, NPM(body-parser, express, express-handlebars, mysql)</p>');
+            htmlOutput += ('<p>Heroku, JawsDB, mySQL, Handlebars, Bootstrap, Express.js, Node.js, Require.js, NPM(body-parser, express, express-handlebars, mysql)</p>');
             break; 
         case "techNodeHerokuBurger2":
             htmlOutput += ('<h3>Burger 2: The Sequel</h3>');
-            htmlOutput += ('<p>Heroku, mySQL, Sequelize, Handlebars, Bootstrap, Express, Node.js, Require.js, NPM(body-parser, dotenv, express, express-handlebars, mysql2, sequelize)</p>');
+            htmlOutput += ('<p>Heroku, JawsDB, mySQL, Sequelize, Handlebars, Bootstrap, Express.js, Node.js, Require.js, NPM(body-parser, dotenv, express, express-handlebars, mysql2, sequelize)</p>');
             break;
         case "techNodeHerokuProject2":
             htmlOutput += ('<h3>Wind Farm: Short Term Planner - Group Project 2</h3>');
-            htmlOutput += ('<p>TEAM: Jag, Paul, Anh, Jason</p><p>Heroku, mySQL, Sequelize, Handlebars, Bootstrap, Express, Node.js, Require.js, Open Weather Map API, NPM(body-parser, dotenv, express, express-handlebars, mysql2, sequelize, mocha, chai, lint, prettier)</p>');
+            htmlOutput += ('<p>TEAM: Jag, Paul, Anh, Jason</p><p>Heroku, JawsDB, mySQL, Sequelize, Handlebars, Bootstrap, Express.js, Node.js, Require.js, Open Weather Map API, NPM(body-parser, dotenv, express, express-handlebars, mysql2, sequelize, mocha, chai, lint, prettier)</p>');
+            break;
+        case "techNodeDiggScraper":
+            htmlOutput += ('<h3>Digg Scraper</h3>');
+            htmlOutput += ('<p>Heroku, mLab, MongoDB, Mongoose, Bootstrap, Express.js, Node.js, Require.js, NPM(axios, body-parser, cheerio, dotenv, express, mongoose, morgan)</p>');
             break;
 
         default:  htmlOutput += ('<p style="color:red;">No Data</p>');
