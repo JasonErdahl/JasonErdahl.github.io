@@ -1,22 +1,34 @@
+
+.container {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+    width: 1100px;
+}
+
+.container .card {
+display:inline-block;
+}
+
 .card {
   background: #fff;
   border-radius: 2px;
-  height: 325px;
+  height: 170px;
   margin: 1rem;
   position: relative;
-  width: 325px;
+  width: 170px;
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
   text-align: left;
 }
 
 .card > .img-container {
-  height: 60%;
+  height: 100%;
   overflow: hidden;
   text-align: center;
-  background:#6CADDC;
+  background:#FFF;
 }
 .card > .img-container > img {
-  width: 60%
+  width: 83%
 }
 
 .card > .content {
@@ -44,4 +56,24 @@
 
 .card > .remove:hover {
   color: #d50000;
+}
+
+.card:hover {
+    -webkit-transform: scale(1.09);
+    -ms-transform: scale(1.09);
+    transform: scale(1.09);
+}
+
+.card.active {
+    animation-name: flashCard;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+@keyframes flashCard {
+    from { -webkit-transform: scale(1.00); -ms-transform: scale(1.00); transform: scale(1.00); }
+    to { -webkit-transform: scale(1.09); -ms-transform: scale(1.09); transform: scale(1.09); }
 }

@@ -6,10 +6,12 @@ const Navbar = props => (
         <ul className="nav nav-bar nav-justified">
             <li><a href="/">Clicky Game</a></li>
             <li
-                className={props.message.indexOf('incorrectly') !== -1 ? 
+                className={props.message.includes('incorrectly') ? 
                     "desc-incorrect" : 
-                    props.message.indexOf('correctly') !== -1 ?
+                    props.message.includes('correctly') ?
                         "desc-correct" :
+                    props.message.includes('Win') ?
+                        "winIndicator active" :
                         "desc-normal"}
             >
                 {props.message}

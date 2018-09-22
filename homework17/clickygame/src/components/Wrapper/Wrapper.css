@@ -1,11 +1,16 @@
+
 .wrapper {
-  padding-top: 50px;
-  background: #ECEFF1;
-  height: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  padding: 20px;
-  justify-content: space-around;
-  align-content: flex-start;
-  overflow: auto;
+    padding-top: 50px;
+    background: lightgoldenrodyellow;
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    padding: 0px;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    overflow: auto;
 }
