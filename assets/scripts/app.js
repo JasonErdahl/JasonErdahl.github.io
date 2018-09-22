@@ -62,7 +62,10 @@ $("#portfolioWrapper li").mouseenter(function(){
             htmlOutput += ('<h3>Digg Scraper</h3>');
             htmlOutput += ('<p>Heroku, mLab, MongoDB, Mongoose, Bootstrap, Express.js, Node.js, Require.js, NPM(axios, body-parser, cheerio, dotenv, express, mongoose, morgan)</p>');
             break;
-
+        case "techReactClickyGame":
+            htmlOutput += ('<h3>Clicky Game</h3>');
+            htmlOutput += ('<p>React, JSX, ES6, NPM(react, react-dom, react-scripts)</p>');
+            break;
         default:  htmlOutput += ('<p style="color:red;">No Data</p>');
     }
 
