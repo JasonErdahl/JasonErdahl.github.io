@@ -66,6 +66,11 @@ $("#portfolioWrapper li").mouseenter(function(){
             htmlOutput += ('<h3>Clicky Game</h3>');
             htmlOutput += ('<p>React, JSX, ES6, NPM(react, react-dom, react-scripts)</p>');
             break;
+        case "techReactBootConnect":
+            htmlOutput += ('<h3>Boot Connect</h3>');
+            htmlOutput += ('<p>React, JSX, ES6, NPM(react, react-bootstrap, react-dom, react-router-dom, react-scripts, aws-sdk, axios, body-parser, dotenv, express, express-session, if-env, multer, mysql2, passport, passport-local, sequelize, axios, install, npm, node)</p>');
+
+            break;
         default:  htmlOutput += ('<p style="color:red;">No Data</p>');
     }
 
